@@ -51,22 +51,22 @@ export class AppComponent {
 
           this.authData.setAuthData(this.userData);
 
-          this.showAlert('success');
+          this.showAlert('success', 'Account Login Successfull');
         } 
         else {
-          this.showAlert('error');
+          this.showAlert('error', 'Account Login Failed');
         }
       });
     }
     else {
-      this.showAlert('error');
+      this.showAlert('error', 'Account Login Failed');
     }
   }
 
-  showAlert(type) {
+  showAlert(type, text) {
     if (type === 'success') {
       this.toastr.success(
-        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Welcome to <b>Employee Dashboard</b> - Login Successfull.</span>',
+        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">'+text+'</span>',
         "",
         {
           timeOut: 4000,
@@ -80,7 +80,7 @@ export class AppComponent {
     
     if (type === 'error') {
       this.toastr.error(
-        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">Login <b>FAILED!</b> - Please Login with valid credentials. </span>',
+        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">'+text+'</span>',
         "",
         {
           timeOut: 4000,
@@ -100,6 +100,12 @@ export class AppComponent {
     else {
       this.authentication = false;
     }
+  }
+
+  accountLogout() {
+    this.authentication = false;
+    console.log('authentication output');
+    this.showAlert('error', 'Account Logged Out');
   }
 
 }

@@ -4,7 +4,7 @@
             <sidebar-cmp></sidebar-cmp>
         </div>
         <div class="main-panel">
-            <navbar-cmp></navbar-cmp>
+            <navbar-cmp (logout)="accountLogout()"></navbar-cmp>
             <div class="content">
                 <router-outlet></router-outlet>
             </div>

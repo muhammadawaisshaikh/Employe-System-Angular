@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { ROUTES } from '../../sidebar/sidebar.component';
 import { Router } from '@angular/router';
 import { Location} from '@angular/common';
@@ -10,6 +10,8 @@ import { Location} from '@angular/common';
 })
 
 export class NavbarComponent implements OnInit{
+  @Output() logout = new EventEmitter<any>();
+  
     private listTitles: any[];
     location: Location;
     private nativeElement: Node;
@@ -33,6 +35,12 @@ export class NavbarComponent implements OnInit{
           this.sidebarClose();
        });
     }
+
+    accountLogout() {
+      localStorage.clear();      
+      this.logout.emit('');
+    }
+
     getTitle(){
       var titlee = this.location.prepareExternalUrl(this.location.path());
       if(titlee.charAt(0) === '#'){
@@ -45,51 +53,55 @@ export class NavbarComponent implements OnInit{
       }
       return 'Dashboard';
     }
+
     sidebarToggle() {
         if (this.sidebarVisible === false) {
             this.sidebarOpen();
         } else {
             this.sidebarClose();
         }
-      }
-      sidebarOpen() {
-          const toggleButton = this.toggleButton;
-          const html = document.getElementsByTagName('html')[0];
-          const mainPanel =  <HTMLElement>document.getElementsByClassName('main-panel')[0];
-          setTimeout(function(){
-              toggleButton.classList.add('toggled');
-          }, 500);
+    }
 
-          html.classList.add('nav-open');
-          if (window.innerWidth < 991) {
-            mainPanel.style.position = 'fixed';
-          }
-          this.sidebarVisible = true;
-      };
-      sidebarClose() {
-          const html = document.getElementsByTagName('html')[0];
-          const mainPanel =  <HTMLElement>document.getElementsByClassName('main-panel')[0];
-          if (window.innerWidth < 991) {
-            setTimeout(function(){
-              mainPanel.style.position = '';
-            }, 500);
-          }
-          this.toggleButton.classList.remove('toggled');
-          this.sidebarVisible = false;
-          html.classList.remove('nav-open');
-      };
-      collapse(){
-        this.isCollapsed = !this.isCollapsed;
-        const navbar = document.getElementsByTagName('nav')[0];
-        console.log(navbar);
-        if (!this.isCollapsed) {
-          navbar.classList.remove('navbar-transparent');
-          navbar.classList.add('bg-white');
-        }else{
-          navbar.classList.add('navbar-transparent');
-          navbar.classList.remove('bg-white');
+    sidebarOpen() {
+        const toggleButton = this.toggleButton;
+        const html = document.getElementsByTagName('html')[0];
+        const mainPanel =  <HTMLElement>document.getElementsByClassName('main-panel')[0];
+        setTimeout(function(){
+            toggleButton.classList.add('toggled');
+        }, 500);
+
+        html.classList.add('nav-open');
+        if (window.innerWidth < 991) {
+          mainPanel.style.position = 'fixed';
         }
+        this.sidebarVisible = true;
+    };
 
+    sidebarClose() {
+        const html = document.getElementsByTagName('html')[0];
+        const mainPanel =  <HTMLElement>document.getElementsByClassName('main-panel')[0];
+        if (window.innerWidth < 991) {
+          setTimeout(function(){
+            mainPanel.style.position = '';
+          }, 500);
+        }
+        this.toggleButton.classList.remove('toggled');
+        this.sidebarVisible = false;
+        html.classList.remove('nav-open');
+    };
+
+    collapse(){
+      this.isCollapsed = !this.isCollapsed;
+      const navbar = document.getElementsByTagName('nav')[0];
+      console.log(navbar);
+      if (!this.isCollapsed) {
+        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('bg-white');
+      }else{
+        navbar.classList.add('navbar-transparent');
+        navbar.classList.remove('bg-white');
       }
+
+    }
 
 }
