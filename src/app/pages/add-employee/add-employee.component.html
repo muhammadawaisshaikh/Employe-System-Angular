@@ -2,12 +2,12 @@
     <div class="card-body">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <form>
+                <form [formGroup]="employeeForm">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                             <label>Name</label>
-                            <input type="text" class="form-control" placeholder="Employee Name">
+                            <input type="text" class="form-control" placeholder="Employee Name" formControlName="employee_name">
                             </div>
                         </div>
                     </div>
@@ -16,7 +16,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                             <label>Date</label>
-                            <input type="date" class="form-control" placeholder="Hiring Date">
+                            <input type="date" class="form-control" placeholder="Hiring Date" formControlName="date_of_hiring">
                             </div>
                         </div>
                     </div>
@@ -25,26 +25,26 @@
                         <div class="col-md-12">
                             <div class="form-group">
                             <label>Email</label>
-                            <input type="text" class="form-control" placeholder="Employee Email">
+                            <input type="text" class="form-control" placeholder="Employee Email" formControlName="email">
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                       <div class="update ml-auto mr-auto">
-                        <button type="submit" class="btn btn-primary btn-round">Get Shareable Link</button>
+                        <a class="btn btn-primary btn-round" (click)="getShareableLink()">Get Shareable Link</a>
                       </div>
                     </div>
                   </form>
             </div>
         </div>
 
-        <div class="text">
+        <div class="text" *ngIf="userData">
             <div class="row">
                 <div class="col-md-12">
-                    <p>www.example.com/muhammadawais</p>
-                    <p>User Name : ABCDE</p>
-                    <p>Password: 1234</p>
+                    <p>URL: <a href="{{employeeService.config.API_ENDPOINT}}">{{employeeService.config.API_ENDPOINT}}{{userData.generated_link}}</a></p>
+                    <p>User Name: {{userData.username}}</p>
+                    <p>Password: {{userData.username}}123</p>
                 </div>
             </div>
         </div>

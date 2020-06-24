@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ToastrModule } from "ngx-toastr";
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
 
@@ -21,12 +22,18 @@ import { EmployeeDetailsComponent } from '../../pages/employee-details/employee-
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { HttpClientModule }    from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   declarations: [
     DashboardComponent,
