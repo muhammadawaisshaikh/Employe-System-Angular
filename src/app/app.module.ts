@@ -13,12 +13,16 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { UserFormsModule } from './pages/user-forms/user-forms.module';
+
+import { HttpClientModule }    from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     AdminLayoutComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes,{
       useHash: true
