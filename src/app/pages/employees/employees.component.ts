@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { NotificationService } from '../../shared/services/notification/notification.service';
+import { EmployeeService } from '../../core/http/employee/employee.service';
+
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
@@ -7,40 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesComponent implements OnInit {
 
-  users: any = [
-    { id: 1,
-      name: 'Hammad',
-      email: 'Hammad@email.com',
-      contact: '+92335698563',
-      location: 'Karachi',
-      type: 'Un Examined',
-    },
-    { id: 2,
-      name: 'Ahmed',
-      email: 'Ahmed@email.com',
-      contact: '+92335698563',
-      location: 'Karachi',
-      type: 'Un Examined',
-    },
-    { id: 3,
-      name: 'Awais',
-      email: 'Awais@email.com',
-      contact: '+92335698563',
-      location: 'Karachi',
-      type: 'Un Examined',
-    },
-    { id: 4,
-      name: 'Shayan',
-      email: 'Shayan@email.com',
-      contact: '+92335698563',
-      location: 'Karachi',
-      type: 'Un Examined',
-    }
-  ];
+  users: any = [];
 
-  constructor() { }
+  constructor(
+    private notification: NotificationService,
+    private employeeService: EmployeeService
+  ) { }
 
   ngOnInit(): void {
+    this.getEmployees();
+  }
+
+  getEmployees() {
+    this.users = this.employeeService.getAllEmployees().subscribe(res=> {
+      if (res) {
+        this.users = res;
+        console.log(this.users);
+      }
+      else {
+        this.notification.showAlert('error', 'Employees Not Found');
+      }
+    });
   }
 
 }
