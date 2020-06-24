@@ -13,7 +13,7 @@ export class EmployeeService {
     private config: ConfigService
   ) { }
 
-  addEmployeeUrl: string = this.config.API_ENDPOINT+'/addEmployee.php';
+  addEmployeeUrl: string = this.config.API_ENDPOINT+'/employee/addEmployee.php';
 
   addEmployee(params) {
     return this.http.post(this.addEmployeeUrl, params, { headers: this.config.headers() });
