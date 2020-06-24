@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { ConfigService } from '../../config/config.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,18 +16,15 @@ export class AuthService {
 
   authUrl: string = this.config.API_ENDPOINT+'/login.php';
 
-  getDashboard() {
+  authenticate(param) {
+    let result;
     let params = {
-      email: 'admin@speedxli.com',
-      password: 'admin123',
-      account_type: 'admin'
+      email: param.email,
+      password: param.password,
+      account_type: param.account_type
     }
 
-    this.http.post(this.authUrl, params, { headers: this.config.headers() }).subscribe( res => {
-      console.log(res);
-    });
-    
-    console.log(this.config.API_ENDPOINT);
+    return this.http.post(this.authUrl, params, { headers: this.config.headers() });
   }
-
+  
 }

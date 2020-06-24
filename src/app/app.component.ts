@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { ToastrService } from "ngx-toastr";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { AuthService } from './core/http/auth/auth.service';
+import { AuthDataService } from './shared/services/auth-data/auth-data.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,14 +15,18 @@ export class AppComponent {
 
   loginForm: FormGroup;
   authentication: boolean = false;
+  userData: any;
 
   constructor(
     private fb: FormBuilder,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private authService: AuthService,
+    private authData: AuthDataService
   ) { }
 
   ngOnInit(): void {
     this.loginFormInit();
+    this.checkAuth();
   }
 
   loginFormInit() {
@@ -31,11 +38,27 @@ export class AppComponent {
 
   auth() {
     if (this.loginForm.valid) {
-      console.log(this.loginForm.value.email);
-      console.log(this.loginForm.value.password);
+      let params = {
+        email: this.loginForm.value.email,
+        password: this.loginForm.value.password,
+        account_type: 'admin'
+      }
 
-      this.showAlert('success');
-    } else {
+      this.userData = this.authService.authenticate(params).subscribe(res=> {
+        if (res) {
+          this.userData = res;
+          this.authentication = true;
+
+          this.authData.setAuthData(this.userData);
+
+          this.showAlert('success');
+        } 
+        else {
+          this.showAlert('error');
+        }
+      });
+    }
+    else {
       this.showAlert('error');
     }
   }
@@ -67,6 +90,15 @@ export class AppComponent {
           positionClass: "toast-" + 'bottom' + "-" + 'right'
         }
       );
+    }
+  }
+
+  checkAuth() {
+    if (this.authData.getAuthData()) {
+      this.authentication = true;
+    }
+    else {
+      this.authentication = false;
     }
   }
 
