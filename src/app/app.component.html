@@ -1,13 +1,50 @@
-<div class="wrapper">
-    <div class="sidebar" data-color="white" data-active-color="danger">
-        <sidebar-cmp></sidebar-cmp>
-    </div>
-    <div class="main-panel">
-        <navbar-cmp></navbar-cmp>
-        <div class="content">
-            <router-outlet></router-outlet>
+<div class="admin-works" *ngIf="authentication">
+    <div class="wrapper">
+        <div class="sidebar" data-color="white" data-active-color="danger">
+            <sidebar-cmp></sidebar-cmp>
         </div>
-        <footer-cmp></footer-cmp>
+        <div class="main-panel">
+            <navbar-cmp></navbar-cmp>
+            <div class="content">
+                <router-outlet></router-outlet>
+            </div>
+            <footer-cmp></footer-cmp>
+        </div>
+    </div>
+    <fixedplugin-cmp></fixedplugin-cmp>
+</div>
+
+<div class="auth-works" *ngIf="!authentication">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <img class="logo-auth" src="../assets/img/main-logo.png">
+
+                    <form [formGroup]="loginForm">
+                        <div class="row">  
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                                </div>
+                            </div>
+        
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-center">
+                            <a class="btn btn-primary px-5 text-white" (click)="auth()">Login</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<fixedplugin-cmp></fixedplugin-cmp>
