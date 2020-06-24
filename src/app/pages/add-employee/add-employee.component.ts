@@ -47,8 +47,6 @@ export class AddEmployeeComponent implements OnInit {
         if (res) {
           this.userData = res;
           this.notification.showAlert('success', 'Employee Adding Success.');
-
-          console.log(this.userData);
         }
         else {
           this.notification.showAlert('error', 'Employee Adding Failed');

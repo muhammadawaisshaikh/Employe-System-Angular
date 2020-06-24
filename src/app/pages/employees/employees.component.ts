@@ -25,7 +25,6 @@ export class EmployeesComponent implements OnInit {
     this.users = this.employeeService.getAllEmployees().subscribe(res=> {
       if (res) {
         this.users = res;
-        console.log(this.users);
       }
       else {
         this.notification.showAlert('error', 'Employees Not Found');
