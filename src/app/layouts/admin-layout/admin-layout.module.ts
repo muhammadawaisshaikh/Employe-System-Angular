@@ -19,6 +19,10 @@ import { MainDashboardComponent } from '../../pages/main-dashboard/main-dashboar
 import { EmployeesComponent } from '../../pages/employees/employees.component';
 import { AddEmployeeComponent } from '../../pages/add-employee/add-employee.component';
 import { EmployeeDetailsComponent } from '../../pages/employee-details/employee-details.component';
+import { FormEmployeeHandbookComponent } from '../../pages/form-employee-handbook/form-employee-handbook.component';
+import { FormW4Component } from '../../pages/form-w4/form-w4.component';
+import { FormI9Component } from '../../pages/form-i9/form-i9.component';
+import { FormDirectDepositComponent } from '../../pages/form-direct-deposit/form-direct-deposit.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -47,7 +51,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MainDashboardComponent,
     EmployeesComponent,
     AddEmployeeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    FormEmployeeHandbookComponent,
+    FormW4Component,
+    FormI9Component,
+    FormDirectDepositComponent,
   ]
 })
 

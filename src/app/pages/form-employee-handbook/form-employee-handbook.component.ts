@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NotificationService } from '../../../shared/services/notification/notification.service';
-import { AuthDataService } from '../../../shared/services/auth-data/auth-data.service';
-import { EmployeeHandbookService } from '../../../core/http/employee-handbook/employee-handbook.service';
+import { NotificationService } from '../../shared/services/notification/notification.service';
+import { AuthDataService } from '../../shared/services/auth-data/auth-data.service';
+import { EmployeeHandbookService } from '../../core/http/employee-handbook/employee-handbook.service';
 
 @Component({
-  selector: 'app-employee-handbook-form',
-  templateUrl: './employee-handbook-form.component.html',
-  styleUrls: ['./employee-handbook-form.component.css']
+  selector: 'app-form-employee-handbook',
+  templateUrl: './form-employee-handbook.component.html',
+  styleUrls: ['./form-employee-handbook.component.css']
 })
-export class EmployeeHandbookFormComponent implements OnInit {
+export class FormEmployeeHandbookComponent implements OnInit {
 
   employeeForm: FormGroup;
   data: any;
@@ -40,8 +40,6 @@ export class EmployeeHandbookFormComponent implements OnInit {
   }
 
   submitEmployeeHandbook() {
-    console.log('submitEmployeeHandbook');
-    
     if (this.employeeForm.valid) {
 
       let params = {
@@ -57,15 +55,15 @@ export class EmployeeHandbookFormComponent implements OnInit {
         date_employee_signature_2: this.employeeForm.value.date_employee_signature_2
       }
 
-      // this.data = this.employeehandbookService.addEmployeeHandbook(params).subscribe(res=> {
-      //   if (res) {
-      //     this.data = res;
-      //     this.notification.showAlert('success', 'Employee Handbook Adding Success.');
-      //   }
-      //   else {
-      //     this.notification.showAlert('error', 'Employee Handbook Adding Failed');
-      //   }
-      // });
+      this.data = this.employeehandbookService.addEmployeeHandbook(params).subscribe(res=> {
+        if (res) {
+          this.data = res;
+          this.notification.showAlert('success', 'Employee Handbook Adding Success.');
+        }
+        else {
+          this.notification.showAlert('error', 'Employee Handbook Adding Failed');
+        }
+      });
     } else {
       this.notification.showAlert('error', 'Employee Handbook Form Input Missing');
     }

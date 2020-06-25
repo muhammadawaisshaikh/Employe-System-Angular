@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { UserFormsModule } from './pages/user-forms/user-forms.module';
 
 import { HttpClientModule }    from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -33,8 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
-    FixedPluginModule,
-    UserFormsModule
+    FixedPluginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
