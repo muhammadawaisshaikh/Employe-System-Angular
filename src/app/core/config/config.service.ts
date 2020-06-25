@@ -8,6 +8,7 @@ import { environment } from '../../../environments/environment';
 export class ConfigService {
 
   API_ENDPOINT: string = environment.API_BASE_URL;
+  FRONTEND_ENDPOINT: string = environment.FRONTEND_BASE_URL;
 
   constructor() { }
 

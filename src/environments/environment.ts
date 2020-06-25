@@ -6,4 +6,5 @@
 export const environment = {
   production: false,
   API_BASE_URL: 'http://localhost/employee-system-php-core-api',
+  FRONTEND_BASE_URL: 'http://localhost:4200',
 };
