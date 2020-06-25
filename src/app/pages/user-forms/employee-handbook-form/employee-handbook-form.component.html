@@ -3,27 +3,26 @@
         <div class="row justify-content-center">
 
             <div class="col-md-12">
-                <form>
+                <form [formGroup]="employeeForm">
                     <div class="row">
-                        
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Employee’s Name">
+                                <input type="text" class="form-control" placeholder="Employee’s Name" formControlName="employee_name">
                             </div>
                         </div>
     
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Signature</label>
-                                <input type="text" class="form-control" placeholder="Employee’s Signature">
+                                <input type="text" class="form-control" placeholder="Employee’s Signature" formControlName="employee_signature">
                             </div>
                         </div>
                     
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="date" class="form-control" placeholder="Hiring Date">
+                                <input type="date" class="form-control" placeholder="Hiring Date" formControlName="date">
                             </div>
                         </div>
 
@@ -34,46 +33,50 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Employee Name">
+                                <input type="text" class="form-control" placeholder="Employee Name" formControlName="weekly_pay_employee_name">
                             </div>
                         </div>
                     
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="date" class="form-control" placeholder="Hiring Date">
+                                <input type="date" class="form-control" placeholder="Hiring Date" formControlName="date_of_hire">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Employee Signature:">
+                                <input type="text" class="form-control" placeholder="Employee Signature:" formControlName="weekly_pay_employee_signature_1">
                             </div>
                         </div>
                     
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="date" class="form-control" placeholder="Hiring Date">
+                                <input type="date" class="form-control" placeholder="Hiring Date" formControlName="date_employee_signature_1">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Employee Signature:">
+                                <input type="text" class="form-control" placeholder="Employee Signature:" formControlName="weekly_pay_employee_signature_2">
                             </div>
                         </div>
                     
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="date" class="form-control" placeholder="Hiring Date">
+                                <input type="date" class="form-control" placeholder="Hiring Date" formControlName="date_employee_signature_2">
                             </div>
                         </div>
-                
                     </div>
+                    <div class="row">
+                        <div class="update ml-auto mr-auto">
+                          <a class="btn btn-primary btn-round" (click)=submitEmployeeHandbook>Submit Employee Handbook</a>
+                        </div>
+                      </div>
                 </form>
             </div>
 

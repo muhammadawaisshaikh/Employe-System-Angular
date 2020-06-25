@@ -79,7 +79,7 @@ export class AppComponent {
   accountLogout() {
     this.authentication = false;
     console.log('authentication output');
-    this.showAlert('error', 'Account Logged Out');
+    this.notification.showAlert('error', 'Account Logged Out');
   }
 
 }
