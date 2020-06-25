@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthService } from './core/http/auth/auth.service';
 import { AuthDataService } from './shared/services/auth-data/auth-data.service';
+import { NotificationService } from './shared/services/notification/notification.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ export class AppComponent {
     private fb: FormBuilder,
     private toastr: ToastrService,
     private authService: AuthService,
-    private authData: AuthDataService
+    private authData: AuthDataService,
+    private notification: NotificationService
   ) { }
 
   ngOnInit(): void {
@@ -40,8 +42,7 @@ export class AppComponent {
     if (this.loginForm.valid) {
       let params = {
         email: this.loginForm.value.email,
-        password: this.loginForm.value.password,
-        account_type: 'admin'
+        password: this.loginForm.value.password
       }
 
       this.userData = this.authService.authenticate(params).subscribe(res=> {
@@ -51,45 +52,18 @@ export class AppComponent {
 
           this.authData.setAuthData(this.userData);
 
-          this.showAlert('success', 'Account Login Successfull');
+          // notify success 
+          if (this.userData[6] === 'admin') this.notification.showAlert('success', 'Admin Login Successfull');
+          else if (this.userData[6] === 'user') this.notification.showAlert('success', this.userData[1]+' - Employee Login Successfull');
+          else this.notification.showAlert('success', 'Login Successfull');
         } 
         else {
-          this.showAlert('error', 'Account Login Failed');
+          this.notification.showAlert('error', 'Account Login Failed');
         }
       });
     }
     else {
-      this.showAlert('error', 'Account Login Failed');
-    }
-  }
-
-  showAlert(type, text) {
-    if (type === 'success') {
-      this.toastr.success(
-        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">'+text+'</span>',
-        "",
-        {
-          timeOut: 4000,
-          closeButton: true,
-          enableHtml: true,
-          toastClass: "alert alert-success alert-with-icon",
-          positionClass: "toast-" + 'bottom' + "-" + 'right'
-        }
-      );
-    }
-    
-    if (type === 'error') {
-      this.toastr.error(
-        '<span data-notify="icon" class="nc-icon nc-bell-55"></span><span data-notify="message">'+text+'</span>',
-        "",
-        {
-          timeOut: 4000,
-          enableHtml: true,
-          closeButton: true,
-          toastClass: "alert alert-danger alert-with-icon",
-          positionClass: "toast-" + 'bottom' + "-" + 'right'
-        }
-      );
+      this.notification.showAlert('error', 'Account Login Failed');
     }
   }
 
