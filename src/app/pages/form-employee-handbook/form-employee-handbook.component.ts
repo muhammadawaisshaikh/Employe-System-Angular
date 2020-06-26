@@ -34,10 +34,7 @@ export class FormEmployeeHandbookComponent implements OnInit {
       date: ['', Validators.required],
       weekly_pay_employee_name: ['', Validators.required],
       date_of_hire: ['', Validators.required],
-      weekly_pay_employee_signature_1: ['', Validators.required],
-      date_employee_signature_1: ['', Validators.required],
-      weekly_pay_employee_signature_2: ['', Validators.required],
-      date_employee_signature_2: ['', Validators.required],
+      probation_period: ['', Validators.required],
     });
   }
 
@@ -50,8 +47,8 @@ export class FormEmployeeHandbookComponent implements OnInit {
       this.getHandbook = this.employeehandbookService.getEmployeeHandbook(params).subscribe(res=> {
         if (res) {
           this.getHandbook = res;
-          
-          this.notification.showAlert('success', 'Employee Handbook Found Already.');
+
+          if(this.getHandbook.length > 0) this.notification.showAlert('success', 'Employee Handbook Found Already.');
         }
         else {
           this.notification.showAlert('error', 'Employee Handbook Not Found.');
@@ -70,10 +67,7 @@ export class FormEmployeeHandbookComponent implements OnInit {
         date: this.employeeForm.value.date,
         weekly_pay_employee_name: this.employeeForm.value.weekly_pay_employee_name,
         date_of_hire: this.employeeForm.value.date_of_hire,
-        weekly_pay_employee_signature_1: this.employeeForm.value.weekly_pay_employee_signature_1,
-        date_employee_signature_1: this.employeeForm.value.date_employee_signature_1,
-        weekly_pay_employee_signature_2: this.employeeForm.value.weekly_pay_employee_signature_2,
-        date_employee_signature_2: this.employeeForm.value.date_employee_signature_2
+        probation_period: this.employeeForm.value.probation_period
       }
 
       this.data = this.employeehandbookService.addEmployeeHandbook(params).subscribe(res=> {
