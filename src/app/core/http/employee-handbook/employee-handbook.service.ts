@@ -13,9 +13,14 @@ export class EmployeeHandbookService {
   ) { }
 
   addEmployeeHandbookUrl: string = this.config.API_ENDPOINT+'/form-employee-handbook/add-employee-handbook.php';
+  getEmployeeHandbookUrl: string = this.config.API_ENDPOINT+'/form-employee-handbook/get-employee-handbook.php';
 
   addEmployeeHandbook(params) {
     return this.http.post(this.addEmployeeHandbookUrl, params, { headers: this.config.headers() });
+  }
+
+  getEmployeeHandbook(params) {
+    return this.http.post(this.getEmployeeHandbookUrl, params, { headers: this.config.headers() });
   }
 
 }

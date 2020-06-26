@@ -13,6 +13,7 @@ export class FormEmployeeHandbookComponent implements OnInit {
 
   employeeForm: FormGroup;
   data: any;
+  getHandbook: any;
 
   constructor(
     private fb: FormBuilder,
@@ -23,6 +24,7 @@ export class FormEmployeeHandbookComponent implements OnInit {
 
   ngOnInit(): void {
     this.employeeFormInit();
+    this.getEmployeeHandbook();
   }
 
   employeeFormInit() {
@@ -37,6 +39,25 @@ export class FormEmployeeHandbookComponent implements OnInit {
       weekly_pay_employee_signature_2: ['', Validators.required],
       date_employee_signature_2: ['', Validators.required],
     });
+  }
+
+  getEmployeeHandbook() {
+    let params = {
+      user_id: this.authData.getAuthData()[0]
+    }
+
+    if (params.user_id) {
+      this.getHandbook = this.employeehandbookService.getEmployeeHandbook(params).subscribe(res=> {
+        if (res) {
+          this.getHandbook = res;
+          
+          this.notification.showAlert('success', 'Employee Handbook Found Already.');
+        }
+        else {
+          this.notification.showAlert('error', 'Employee Handbook Not Found.');
+        }
+      });
+    }
   }
 
   submitEmployeeHandbook() {
