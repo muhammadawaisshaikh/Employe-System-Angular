@@ -74,7 +74,7 @@
                     </div>
                     <div class="row">
                         <div class="update ml-auto mr-auto">
-                          <a class="btn btn-primary btn-round" (click)=submitEmployeeHandbook()>Submit Employee Handbook</a>
+                          <a class="btn btn-primary btn-round" (click)="submitEmployeeHandbook()">Submit Employee Handbook</a>
                         </div>
                       </div>
                 </form>
@@ -85,6 +85,7 @@
         <div class="row" *ngIf="getHandbook.length > 0">
             <div class="container">
                 <h4>Employee Handbook Submitted Already!</h4>
+                <a class="btn btn-primary btn-round" routerLink="/form-w4">proceed to w4-form</a>
             </div>
         </div>
     </div>
