@@ -26,6 +26,7 @@ export class FormW4Component implements OnInit {
 
   ngOnInit(): void {
     this.w4FormInit();
+    this.getW4Form();
   }
 
   w4FormInit() {
@@ -37,6 +38,25 @@ export class FormW4Component implements OnInit {
       w4_marital_status: ['', Validators.required],
       w4_city: ['', Validators.required],
     });
+  }
+
+  getW4Form() {
+    let params = {
+      user_id: this.authData.getAuthData()[0]
+    }
+
+    if (params.user_id) {
+      this.getW4 = this.w4FormService.getW4Form(params).subscribe(res=> {
+        if (res) {
+          this.getW4 = res;
+
+          if(this.getW4.length > 0) this.notification.showAlert('success', 'W4 Form Found Already.');
+        }
+        else {
+          this.notification.showAlert('error', 'W4 Form Not Found.');
+        }
+      });
+    }
   }
 
   submitW4Form() {

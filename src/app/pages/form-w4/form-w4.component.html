@@ -1,6 +1,6 @@
 <div class="card card-user">
     <div class="card-body">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" *ngIf="getW4.length == 0">
 
             <div class="col-md-12">
                 <form [formGroup]="w4Form">
@@ -59,6 +59,12 @@
                 </form>
             </div>
 
+        </div>
+        <div class="row" *ngIf="getW4.length > 0">
+            <div class="container">
+                <h4>W4 Form Submitted Already!</h4>
+                <a class="btn btn-primary btn-round" routerLink="/form-I9">proceed to i9-form</a>
+            </div>
         </div>
     </div>
 </div>
