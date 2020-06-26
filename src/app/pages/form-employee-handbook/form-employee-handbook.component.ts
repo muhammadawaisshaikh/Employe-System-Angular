@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotificationService } from '../../shared/services/notification/notification.service';
 import { AuthDataService } from '../../shared/services/auth-data/auth-data.service';
@@ -16,6 +17,7 @@ export class FormEmployeeHandbookComponent implements OnInit {
   getHandbook: any;
 
   constructor(
+    private router: Router,
     private fb: FormBuilder,
     private notification: NotificationService,
     private employeehandbookService: EmployeeHandbookService,
@@ -73,7 +75,14 @@ export class FormEmployeeHandbookComponent implements OnInit {
       this.data = this.employeehandbookService.addEmployeeHandbook(params).subscribe(res=> {
         if (res) {
           this.data = res;
-          this.notification.showAlert('success', 'Employee Handbook Adding Success.');
+
+          if(this.data == 'success') 
+          {
+            this.employeeForm.reset();
+            this.router.navigateByUrl('/form-w4');
+            this.notification.showAlert('success', 'Employee Handbook Adding Success.');
+          }
+          
         }
         else {
           this.notification.showAlert('error', 'Employee Handbook Adding Failed');
