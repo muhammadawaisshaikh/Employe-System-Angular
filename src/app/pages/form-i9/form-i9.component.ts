@@ -14,7 +14,7 @@ export class FormI9Component implements OnInit {
 
   i9Form: FormGroup;
   data: any;
-  getHandbook: any;
+  getI9Form: any;
 
   attestCheck: string = '';
   translatorCheck: string = '';
@@ -29,6 +29,26 @@ export class FormI9Component implements OnInit {
 
   ngOnInit(): void {
     this.i9FormInit();
+    this.geti9Form();
+  }
+
+  geti9Form() {
+    let params = {
+      user_id: this.authData.getAuthData()[0]
+    }
+
+    if (params.user_id) {
+      this.i9FormService.getI9Form(params).subscribe(res=> {
+        if (res) {
+          this.getI9Form = res;
+
+          if(this.getI9Form.length > 0) this.notification.showAlert('success', 'i9 Form Found Already.');
+        }
+        else {
+          this.notification.showAlert('error', 'i9 Form Not Found.');
+        }
+      });
+    }
   }
 
   todayDateFormat() {

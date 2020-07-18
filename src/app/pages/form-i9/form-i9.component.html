@@ -1,6 +1,6 @@
 <div class="card card-user">
-    <div class="card-body">
-        <div class="row justify-content-center">
+    <div class="card-body" *ngIf="getI9Form">
+        <div class="row justify-content-center" *ngIf="getI9Form.length == 0">
 
             <div class="col-md-12">
                 <form [formGroup]="i9Form">
@@ -647,6 +647,14 @@
             </div>
 
         </div>
+
+        <div class="row" *ngIf="getI9Form.length > 0">
+            <div class="container">
+                <h4>i9 Form Submitted Already!</h4>
+                <a class="btn btn-primary btn-round" routerLink="/form-direct-deposit">proceed to Direct Deposit</a>
+            </div>
+        </div>
+
     </div>
 </div>
 
