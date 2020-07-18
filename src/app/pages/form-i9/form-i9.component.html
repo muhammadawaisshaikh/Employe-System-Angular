@@ -110,22 +110,22 @@
 
                         <div class="col-md-12 pt-4">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="A citizen of the United States" formControlName="i9_i_attest_i_am">
-                                <label for="checking" class="pl-3">1. A citizen of the United States</label>
+                                <input type="checkbox" id="checkinga" value="A citizen of the United States" formControlName="i9_i_attest_i_am" (change)="changeAttestCheck($event)">
+                                <label for="checkinga" class="pl-3">1. A citizen of the United States</label>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="A noncitizen national of the United States" formControlName="i9_i_attest_i_am">
-                                <label for="checking" class="pl-3">2. A noncitizen national of the United States (See instructions)</label>
+                                <input type="checkbox" id="checkingb" value="A noncitizen national of the United States" formControlName="i9_i_attest_i_am" (change)="changeAttestCheck($event)">
+                                <label for="checkingb" class="pl-3">2. A noncitizen national of the United States (See instructions)</label>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="A lawful permanent resident" formControlName="i9_i_attest_i_am">
-                                <label for="checking" class="pl-3">3. A lawful permanent resident</label>
+                                <input type="checkbox" id="checkingc" value="A lawful permanent resident" formControlName="i9_i_attest_i_am" (change)="changeAttestCheck($event)">
+                                <label for="checkingc" class="pl-3">3. A lawful permanent resident</label>
                             </div>
                         </div>
 
@@ -137,8 +137,8 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="An alien authorized to work">
-                                <label for="checking" class="pl-3">4. An alien authorized to work</label>
+                                <input type="checkbox" id="checkingd" value="An alien authorized to work" formControlName="i9_i_attest_i_am" (change)="changeAttestCheck($event)">
+                                <label for="checkingd" class="pl-3">4. An alien authorized to work</label>
                             </div>
                         </div>
 
@@ -222,15 +222,15 @@
 
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="no" formControlName="translator_check">
-                                <label for="checking" class="pl-3">I did not use a preparer or translator.</label>
+                                <input type="checkbox" id="checkingx" value="I did not use a preparer or translator" formControlName="translator_check" (change)="changeTranslatorCheck($event)">
+                                <label for="checkingx" class="pl-3">I did not use a preparer or translator.</label>
                             </div>
                         </div>
 
                         <div class="col-md-7">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="yes" formControlName="translator_check">
-                                <label for="checking" class="pl-3">A preparer(s) and/or translator(s) assisted the employee in completing Section 1.</label>
+                                <input type="checkbox" id="checkingy" value="A preparer(s) and/or translator(s) assisted the employee in completing Section 1." formControlName="translator_check" (change)="changeTranslatorCheck($event)">
+                                <label for="checkingy" class="pl-3">A preparer(s) and/or translator(s) assisted the employee in completing Section 1.</label>
                             </div>
                         </div>
 

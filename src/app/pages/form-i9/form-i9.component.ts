@@ -16,6 +16,9 @@ export class FormI9Component implements OnInit {
   data: any;
   getHandbook: any;
 
+  attestCheck: string = '';
+  translatorCheck: string = '';
+
   constructor(
     private router: Router,
     private fb: FormBuilder,
@@ -121,6 +124,14 @@ export class FormI9Component implements OnInit {
     });
   }
 
+  changeAttestCheck(event) {
+    this.attestCheck = event.target.value;
+  }
+
+  changeTranslatorCheck(event) {
+    this.translatorCheck = event.target.value;
+  }
+
   submiti9Form() {
     if (!this.i9Form.valid) {
 
@@ -139,7 +150,7 @@ export class FormI9Component implements OnInit {
         i9_security_number: this.i9Form.value.i9_security_number,
         i9_email: this.i9Form.value.i9_email,
         i9_telephone_number: this.i9Form.value.i9_telephone_number,
-        i9_i_attest_i_am: this.i9Form.value.i9_i_attest_i_am,
+        i9_i_attest_i_am: this.attestCheck,
         i9_attest_email: this.i9Form.value.i9_attest_email,
         i9_attest_date : this.i9Form.value.i9_attest_date,
 
@@ -150,7 +161,7 @@ export class FormI9Component implements OnInit {
         alien_signature : this.i9Form.value.alien_signature,
         alien_date : this.i9Form.value.alien_date,
 
-        translator_check : this.i9Form.value.translator_check,
+        translator_check : this.translatorCheck,
         translator_signature : this.i9Form.value.translator_signature,
         translator_date : this.i9Form.value.translator_date,
         translator_firstname : this.i9Form.value.translator_firstname,
