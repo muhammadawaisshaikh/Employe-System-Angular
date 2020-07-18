@@ -1,6 +1,6 @@
 <div class="admin-works" *ngIf="authentication">
     <div class="wrapper">
-        <div class="sidebar" data-color="white" data-active-color="danger">
+        <div class="sidebar no-print" data-color="white" data-active-color="danger">
             <sidebar-cmp></sidebar-cmp>
         </div>
         <div class="main-panel">
@@ -11,7 +11,7 @@
             <footer-cmp></footer-cmp>
         </div>
     </div>
-    <fixedplugin-cmp></fixedplugin-cmp>
+    <fixedplugin-cmp class="no-print"></fixedplugin-cmp>
 </div>
 
 <div class="auth-works" *ngIf="!authentication">
