@@ -17,6 +17,7 @@ import { FormEmployeeHandbookComponent } from '../../pages/form-employee-handboo
 import { FormW4Component } from '../../pages/form-w4/form-w4.component';
 import { FormI9Component } from '../../pages/form-i9/form-i9.component';
 import { FormDirectDepositComponent } from '../../pages/form-direct-deposit/form-direct-deposit.component';
+import { EmployeeHandbookPdfMakingComponent } from '../../pages/employee-handbook-pdf-making/employee-handbook-pdf-making.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -36,4 +37,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'form-w4', component: FormW4Component },
     { path: 'form-I9', component: FormI9Component },
     { path: 'form-direct-deposit', component: FormDirectDepositComponent },
+    { path: 'employee-handbook-pdf-view', component: EmployeeHandbookPdfMakingComponent },
 ];
