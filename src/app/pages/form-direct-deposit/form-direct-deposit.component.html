@@ -1,29 +1,28 @@
 <div class="card card-user">
     <div class="card-body">
-        <div class="row justify-content-center">
-
+        <div class="row justify-content-center" *ngIf="getDirectDeposit.length == 0">
             <div class="col-md-12">
-                <form>
+                <form [formGroup]="directDepositForm">
                     <div class="row">
                         
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name">
+                                <input type="text" class="form-control" placeholder="Name" formControlName="direct_deposit_name">
                             </div>
                         </div>
     
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Address</label>
-                                <input type="text" class="form-control" placeholder="Address">
+                                <input type="text" class="form-control" placeholder="Address" formControlName="direct_deposit_address">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>City</label>
-                                <input type="text" class="form-control" placeholder="City, State, Zip">
+                                <input type="text" class="form-control" placeholder="City, State, Zip" formControlName="direct_deposit_city">
                             </div>
                         </div>
 
@@ -34,38 +33,38 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name of Bank">
+                                <input type="text" class="form-control" placeholder="Name of Bank" formControlName="name_of_bank">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Account</label>
-                                <input type="text" class="form-control" placeholder="Account #">
+                                <input type="text" class="form-control" placeholder="Account #" formControlName="bank_account_number">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>9-Digit</label>
-                                <input type="text" class="form-control" placeholder="9-Digit Routing #">
+                                <input type="text" class="form-control" placeholder="9-Digit Routing #" formControlName="nine_digit_routing">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Amount</label>
-                                <input type="text" class="form-control" placeholder="Amount">
+                                <input type="text" class="form-control" placeholder="Amount" formControlName="amount">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group mt-1">
-                                <label>Amount</label>
-                                <select>
-                                    <option value="volo">Amount Type</option>
-                                    <option value="saab">$</option>
-                                    <option value="saab">%</option>
+                                <label>Amount Type</label>
+                                <select formControlName="amount_type">
+                                    <option value="0">Amount Type</option>
+                                    <option value="$">$</option>
+                                    <option value="€">€</option>
                                 </select>
                             </div> 
                         </div>
@@ -73,15 +72,15 @@
                         <div class="col-md-6">
                             <label class="pb-2">Type of Account</label>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <input type="checkbox" id="checking" name="checking" value="Checking">
-                                        <label for="checking" class="pl-2">Checking</label>
+                                        <input type="radio" id="current" value="Current" formControlName="account_type">
+                                        <label for="current" class="pl-2">Current</label>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <input type="checkbox" id="savings" name="savings" value="Savings">
+                                        <input type="radio" id="savings" value="Savings" formControlName="account_type">
                                         <label for="savings" class="pl-2">Savings</label>
                                     </div>
                                 </div>
@@ -90,30 +89,31 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Account</label>
-                                <input type="text" class="form-control" placeholder="Type of Account">
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="form-group">
                                 <label>Signature</label>
-                                <input type="text" class="form-control" placeholder="Employee’s Signature">
+                                <input type="text" class="form-control" placeholder="Employee’s Signature" formControlName="direct_deposit_employee_signature">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="date" class="form-control" placeholder="Hiring Date">
+                                <input type="date" class="form-control" placeholder="Hiring Date" formControlName="direct_deposit_date">
                             </div>
                         </div>
-                
+                    </div>
+                    <div class="row">
+                        <div class="update ml-auto mr-auto">
+                          <a class="btn btn-primary btn-round" (click)="submitI9Form()">Submit Direct Deposit Form</a>
+                        </div>
                     </div>
                 </form>
             </div>
-
+        </div>
+        <div class="row" *ngIf="getDirectDeposit.length > 0">
+            <div class="container">
+                <h4>Direct Deposit Form Submitted Already!</h4>
+                <p>All Forms Are Successfully Submitted.</p>
+            </div>
         </div>
     </div>
 </div>
