@@ -2,106 +2,118 @@
 
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
-        <div class="card-body ">
-            <div class="row">
-            <div class="col-5 col-md-4">
-                <div class="icon-big text-center icon-warning">
-                <i class="nc-icon nc-paper text-warning"></i>
+            <div class="card-body ">
+                <div class="row">
+                <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                    <i class="nc-icon nc-paper text-warning"></i>
+                    </div>
+                </div>
+                <div class="col-7 col-md-8">
+                    <div class="numbers">
+                    <p class="card-category">Employee Handbook</p>
+                    <p class="card-title">Form-1<p>
+                    </div>
+                </div>
                 </div>
             </div>
-            <div class="col-7 col-md-8">
-                <div class="numbers">
-                <p class="card-category">Employee Handbook</p>
-                <p class="card-title">Form-1<p>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats" *ngIf="getHandbook.length>0">
+                    <span>View </span><i class="fa fa-chevron-circle-right"></i> 
+                </div>
+                <div class="stats text-danger" *ngIf="getHandbook.length == 0">
+                    <span><b>Form Not Filled Yet</b></span> 
                 </div>
             </div>
-            </div>
-        </div>
-        <div class="card-footer ">
-            <hr>
-            <div class="stats">
-                <span>View </span><i class="fa fa-chevron-circle-right"></i> 
-            </div>
-        </div>
         </div>
     </div>
 
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
-        <div class="card-body ">
-            <div class="row">
-            <div class="col-5 col-md-4">
-                <div class="icon-big text-center icon-warning">
-                <i class="nc-icon nc-paper text-warning"></i>
+            <div class="card-body ">
+                <div class="row">
+                <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                    <i class="nc-icon nc-paper text-warning"></i>
+                    </div>
+                </div>
+                <div class="col-7 col-md-8">
+                    <div class="numbers">
+                    <p class="card-category">Form W-4</p>
+                    <p class="card-title">Form-2<p>
+                    </div>
+                </div>
                 </div>
             </div>
-            <div class="col-7 col-md-8">
-                <div class="numbers">
-                <p class="card-category">Form W-4</p>
-                <p class="card-title">Form-2<p>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats" *ngIf="getW4.length>0">
+                    <span>View </span><i class="fa fa-chevron-circle-right"></i> 
+                </div>
+                <div class="stats text-danger" *ngIf="getW4.length == 0">
+                    <span><b>Form Not Filled Yet</b></span> 
                 </div>
             </div>
-            </div>
-        </div>
-        <div class="card-footer ">
-            <hr>
-            <div class="stats">
-                <span>View </span><i class="fa fa-chevron-circle-right"></i> 
-            </div>
-        </div>
         </div>
     </div>
 
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
-        <div class="card-body ">
-            <div class="row">
-            <div class="col-5 col-md-4">
-                <div class="icon-big text-center icon-warning">
-                <i class="nc-icon nc-paper  text-warning"></i>
+            <div class="card-body ">
+                <div class="row">
+                <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                    <i class="nc-icon nc-paper  text-warning"></i>
+                    </div>
+                </div>
+                <div class="col-7 col-md-8">
+                    <div class="numbers">
+                    <p class="card-category">Form I-9</p>
+                    <p class="card-title">Form-3
+                        <p>
+                    </div>
+                </div>
                 </div>
             </div>
-            <div class="col-7 col-md-8">
-                <div class="numbers">
-                <p class="card-category">Form I-9</p>
-                <p class="card-title">Form-3
-                    <p>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats" *ngIf="getI9Form.length>0">
+                    <span>View </span><i class="fa fa-chevron-circle-right"></i> 
+                </div>
+                <div class="stats text-danger" *ngIf="getI9Form.length == 0">
+                    <span><b>Form Not Filled Yet</b></span> 
                 </div>
             </div>
-            </div>
-        </div>
-        <div class="card-footer ">
-            <hr>
-            <div class="stats">
-                <span>View </span><i class="fa fa-chevron-circle-right"></i> 
-            </div>
-        </div>
         </div>
     </div>
 
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
-        <div class="card-body ">
-            <div class="row">
-            <div class="col-5 col-md-4">
-                <div class="icon-big text-center icon-warning">
-                <i class="nc-icon nc-paper text-warning"></i>
+            <div class="card-body ">
+                <div class="row">
+                <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                    <i class="nc-icon nc-paper text-warning"></i>
+                    </div>
+                </div>
+                <div class="col-7 col-md-8">
+                    <div class="numbers">
+                    <p class="card-category">Direct Deposit</p>
+                    <p class="card-title">Form-4<p>
+                    </div>
+                </div>
                 </div>
             </div>
-            <div class="col-7 col-md-8">
-                <div class="numbers">
-                <p class="card-category">Direct Deposit</p>
-                <p class="card-title">Form-4<p>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats" *ngIf="getDirectDeposit.length>0">
+                    <span>View </span><i class="fa fa-chevron-circle-right"></i> 
+                </div>
+                <div class="stats text-danger" *ngIf="getDirectDeposit.length == 0">
+                    <span><b>Form Not Filled Yet</b></span> 
                 </div>
             </div>
-            </div>
-        </div>
-        <div class="card-footer ">
-            <hr>
-            <div class="stats">
-                <span>View </span><i class="fa fa-chevron-circle-right"></i> 
-            </div>
-        </div>
         </div>
     </div>
 </div>
