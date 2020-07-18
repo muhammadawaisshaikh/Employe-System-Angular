@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
 
             <div class="col-md-12">
-                <form>
+                <form [formGroup]="i9Form">
                     <div class="row">
 
                         <div class="col-md-12">
@@ -14,91 +14,91 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="First Name">
+                                <input type="text" class="form-control" placeholder="First Name" formControlName="i9_firstname">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Last Name (Family Name)">
+                                <input type="text" class="form-control" placeholder="Last Name (Family Name)" formControlName="i9_lastname">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Middle Initial">
+                                <input type="text" class="form-control" placeholder="Middle Initial" formControlName="i9_middlename">
                             </div>
                         </div>
     
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Other Last Names Used (if any)">
+                                <input type="text" class="form-control" placeholder="Other Last Names Used (if any)" formControlName="i9_other_last_name">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Address</label>
-                                <input type="text" class="form-control" placeholder="Address (number and street)">
+                                <input type="text" class="form-control" placeholder="Address (number and street)" formControlName="i9_address">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Number</label>
-                                <input type="text" class="form-control" placeholder="Apt. Number">
+                                <input type="text" class="form-control" placeholder="Apt. Number" formControlName="i9_apartment_no">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>City</label>
-                                <input type="text" class="form-control" placeholder="City or Town">
+                                <input type="text" class="form-control" placeholder="City or Town" formControlName="i9_city">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>State</label>
-                                <input type="text" class="form-control" placeholder="State">
+                                <input type="text" class="form-control" placeholder="State" formControlName="i9_state">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Code</label>
-                                <input type="text" class="form-control" placeholder="ZIP Code">
+                                <input type="text" class="form-control" placeholder="ZIP Code" formControlName="i9_zip_code">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="date" class="form-control" placeholder="Date of birth">
+                                <input type="date" class="form-control" placeholder="Date of birth" formControlName="i9_date">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Security Number</label>
-                                <input type="text" class="form-control" placeholder="000-00-0000">
+                                <input type="text" class="form-control" placeholder="000-00-0000" formControlName="i9_security_number">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>E-mail</label>
-                                <input type="text" class="form-control" placeholder="E-mail Address">
+                                <input type="text" class="form-control" placeholder="E-mail Address" formControlName="i9_email">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Number</label>
-                                <input type="text" class="form-control" placeholder="Telephone Number">
+                                <input type="text" class="form-control" placeholder="Telephone Number" formControlName="i9_telephone_number">
                             </div>
                         </div>
 
@@ -110,41 +110,41 @@
 
                         <div class="col-md-12 pt-4">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="Checking">
+                                <input type="checkbox" id="checking" name="checking" value="A citizen of the United States" formControlName="i9_i_attest_i_am">
                                 <label for="checking" class="pl-3">1. A citizen of the United States</label>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="Checking">
+                                <input type="checkbox" id="checking" name="checking" value="A noncitizen national of the United States" formControlName="i9_i_attest_i_am">
                                 <label for="checking" class="pl-3">2. A noncitizen national of the United States (See instructions)</label>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="Checking">
+                                <input type="checkbox" id="checking" name="checking" value="A lawful permanent resident" formControlName="i9_i_attest_i_am">
                                 <label for="checking" class="pl-3">3. A lawful permanent resident</label>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="E-mail Address">
+                                <input type="text" class="form-control" placeholder="E-mail Address" formControlName="i9_attest_email">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="Checking">
+                                <input type="checkbox" id="checking" name="checking" value="An alien authorized to work">
                                 <label for="checking" class="pl-3">4. An alien authorized to work</label>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="date" class="form-control" placeholder="Hiring Date">
+                                <input type="date" class="form-control" placeholder="Hiring Date" formControlName="i9_attest_date">
                             </div>
                         </div>
 
@@ -160,7 +160,7 @@
  
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="">
+                                <input type="text" class="form-control" placeholder="Number/USCIS Number" formControlName="alien_reg_or_uscis">
                             </div>
                         </div>
 
@@ -174,7 +174,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="">
+                                <input type="text" class="form-control" placeholder="Form I-94 Admission Number" formControlName="alien_i94_admission_number">
                             </div>
                         </div>
 
@@ -188,7 +188,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="">
+                                <input type="text" class="form-control" placeholder="Foreign Passport Number" formControlName="alien_foreign_passport_number">
                             </div>
                         </div>
 
@@ -198,21 +198,21 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="">
+                                <input type="text" class="form-control" placeholder="Country of Issuance" formControlName="alien_country_issuance">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Signature</label>
-                                <input type="text" class="form-control" placeholder="Signature of Employee">
+                                <input type="text" class="form-control" placeholder="Signature of Employee" formControlName="alien_signature">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="date" class="form-control" placeholder="Today's Date">
+                                <input type="date" class="form-control" placeholder="Today's Date" formControlName="alien_date">
                             </div>
                         </div>
 
@@ -222,14 +222,14 @@
 
                         <div class="col-md-5">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="Checking">
+                                <input type="checkbox" id="checking" name="checking" value="no" formControlName="translator_check">
                                 <label for="checking" class="pl-3">I did not use a preparer or translator.</label>
                             </div>
                         </div>
 
                         <div class="col-md-7">
                             <div class="form-group">
-                                <input type="checkbox" id="checking" name="checking" value="Checking">
+                                <input type="checkbox" id="checking" name="checking" value="yes" formControlName="translator_check">
                                 <label for="checking" class="pl-3">A preparer(s) and/or translator(s) assisted the employee in completing Section 1.</label>
                             </div>
                         </div>
@@ -247,56 +247,56 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Signature</label>
-                                <input type="text" class="form-control" placeholder="Signature of Preparer or Translator">
+                                <input type="text" class="form-control" placeholder="Signature of Preparer or Translator" formControlName="translator_signature">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Date</label>
-                                <input type="date" class="form-control" placeholder="Today's Date">
+                                <input type="date" class="form-control" placeholder="Today's Date" formControlName="translator_date">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Last Name (Family Name)">
+                                <input type="text" class="form-control" placeholder="Last Name (Family Name)" formControlName="translator_lastname">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="First Name (Given Name)">
+                                <input type="text" class="form-control" placeholder="First Name (Given Name)" formControlName="translator_firstname">
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Address</label>
-                                <input type="text" class="form-control" placeholder="Address (Street Number and Name)">
+                                <input type="text" class="form-control" placeholder="Address (Street Number and Name)" formControlName="translator_address">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>City</label>
-                                <input type="text" class="form-control" placeholder="City or Town">
+                                <input type="text" class="form-control" placeholder="City or Town" formControlName="translator_city">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>State</label>
-                                <input type="text" class="form-control" placeholder="State">
+                                <input type="text" class="form-control" placeholder="State" formControlName="translator_state">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>ZIP</label>
-                                <input type="text" class="form-control" placeholder="ZIP Code">
+                                <input type="text" class="form-control" placeholder="ZIP Code" formControlName="translator_zip">
                             </div>
                         </div>
 
@@ -316,25 +316,25 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name (Family Name)">
+                                <input type="text" class="form-control" placeholder="Last Name (Family Name)" formControlName="authorized_rep_lastname">
                             </div>
                         </div>
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name (Given Name)">
+                                <input type="text" class="form-control" placeholder="First Name (Given Name)" formControlName="authorized_rep_firstname">
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="M.I.">
+                                <input type="text" class="form-control" placeholder="M.I." formControlName="authorized_rep_m_i">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Citizenship/Immigration Status">
+                                <input type="text" class="form-control" placeholder="Citizenship/Immigration Status" formControlName="authorized_rep_immigration_status">
                             </div>
                         </div>
 
@@ -352,49 +352,49 @@
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Document Title">
+                                                <input type="text" class="form-control" placeholder="Document Title" formControlName="authorized_rep_a_doc_title">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Issuing Authority">
+                                                <input type="text" class="form-control" placeholder="Issuing Authority" formControlName="authorized_rep_a_issue_auth">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Document Number">
+                                                <input type="text" class="form-control" placeholder="Document Number" formControlName="authorized_rep_a_doc_num">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="date" class="form-control" placeholder="Expiration Date (if any) (mm/dd/yyyy)">
+                                                <input type="date" class="form-control" placeholder="Expiration Date (if any) (mm/dd/yyyy)" formControlName="authorized_rep_a_date">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Document text">
+                                                <input type="text" class="form-control" placeholder="Document text" formControlName="authorized_rep_a_doc_text">
                                             </div>
                                         </div>
                 
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Issuing Authority">
+                                                <input type="text" class="form-control" placeholder="Issuing Authority" formControlName="authorized_rep_a_issue_auth_1">
                                             </div>
                                         </div>
                 
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Document Number">
+                                                <input type="text" class="form-control" placeholder="Document Number" formControlName="authorized_rep_a_doc_num_1">
                                             </div>
                                         </div>
                 
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Expiration Date (if any) (mm/dd/yyyy)">
+                                                <input type="date" class="form-control" placeholder="Expiration Date (if any) (mm/dd/yyyy)" formControlName="authorized_rep_a_expiration_date">
                                             </div>
                                         </div>
                                     </div>
@@ -412,31 +412,31 @@
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Document Title">
+                                                <input type="text" class="form-control" placeholder="Document Title" formControlName="authorized_rep_b_doc_title">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Issuing Authority">
+                                                <input type="text" class="form-control" placeholder="Issuing Authority" formControlName="authorized_rep_b_issue_auth">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Document Number">
+                                                <input type="text" class="form-control" placeholder="Document Number" formControlName="authorized_rep_b_doc_num">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="date" class="form-control" placeholder="Expiration Date (if any) (mm/dd/yyyy)">
+                                                <input type="date" class="form-control" placeholder="Expiration Date (if any) (mm/dd/yyyy)" formControlName="authorized_rep_b_date">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <textarea rows="5" placeholder="Your Message"></textarea>
+                                                <textarea rows="5" placeholder="Your Message" formControlName="authorized_rep_b_msg"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -451,25 +451,25 @@
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Document Title">
+                                                <input type="text" class="form-control" placeholder="Document Title" formControlName="authorized_rep_c_doc_title">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Issuing Authority">
+                                                <input type="text" class="form-control" placeholder="Issuing Authority" formControlName="authorized_rep_c_issue_auth">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="text" class="form-control" placeholder="Document Number">
+                                                <input type="text" class="form-control" placeholder="Document Number" formControlName="authorized_rep_c_doc_num">
                                             </div>
                                         </div>
     
                                         <div class="row">
                                             <div class="form-group w-100">
-                                                <input type="date" class="form-control" placeholder="Expiration Date (if any) (mm/dd/yyyy)">
+                                                <input type="date" class="form-control" placeholder="Expiration Date (if any) (mm/dd/yyyy)" formControlName="authorized_rep_c_date">
                                             </div>
                                         </div>
     
@@ -490,67 +490,67 @@
  
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="date" class="form-control" placeholder="first day">
+                                <input type="date" class="form-control" placeholder="first day" formControlName="authorized_rep_employee_first_day">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Signature of Employer or Authorized Representative">
+                                <input type="text" class="form-control" placeholder="Signature of Employer or Authorized Representative" formControlName="authorized_rep_signature">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="date" class="form-control" placeholder="Today's Date">
+                                <input type="date" class="form-control" placeholder="Today's Date" formControlName="authorized_rep_sign_date">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Title of Employer or Authorized Representative">
+                                <input type="text" class="form-control" placeholder="Title of Employer or Authorized Representative" formControlName="authorized_rep_title">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name of Employer or Authorized Representative">
+                                <input type="text" class="form-control" placeholder="Last Name of Employer or Authorized Representative" formControlName="authorized_rep_emp_lastname">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name of Employer or Authorized Representative">
+                                <input type="text" class="form-control" placeholder="First Name of Employer or Authorized Representative" formControlName="authorized_rep_emp_firstname">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Employer's Business or Organization Name">
+                                <input type="text" class="form-control" placeholder="Employer's Business or Organization Name" formControlName="authorized_rep_business">
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Employer's Business or Organization Address (Street Number and Name)">
+                                <input type="text" class="form-control" placeholder="Employer's Business or Organization Address (Street Number and Name)" formControlName="authorized_rep_business_address">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="City or Town">
+                                <input type="text" class="form-control" placeholder="City or Town" formControlName="authorized_rep_city">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="State">
+                                <input type="text" class="form-control" placeholder="State" formControlName="authorized_rep_state">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="ZIP Code">
+                                <input type="text" class="form-control" placeholder="ZIP Code" formControlName="authorized_rep_zip">
                             </div>
                         </div>
 
@@ -568,25 +568,25 @@
 
                         <div class="col-md-3 pt-2">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name (Family Name)">
+                                <input type="text" class="form-control" placeholder="Last Name (Family Name)" formControlName="rehires_lastname">
                             </div>
                         </div>
 
                         <div class="col-md-3 pt-2">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name (Given Name)">
+                                <input type="text" class="form-control" placeholder="First Name (Given Name)" formControlName="rehires_firstname">
                             </div>
                         </div>
 
                         <div class="col-md-2 pt-2">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Middle Initial">
+                                <input type="text" class="form-control" placeholder="Middle Initial" formControlName="rehires_middlename">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="date" class="form-control" placeholder="Date">
+                                <input type="date" class="form-control" placeholder="Date" formControlName="rehires_date_rehire">
                             </div>
                         </div>
 
@@ -596,20 +596,20 @@
 
                         <div class="col-md-4 pt-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Document Title">
+                                <input type="text" class="form-control" placeholder="Document Title" formControlName="rehires_doc_title">
                             </div>
                         </div>
 
                         <div class="col-md-4 pt-4">
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="Document Number">
+                                <input type="number" class="form-control" placeholder="Document Number" formControlName="rehires_doc_num">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Expiration Date (if any) (mm/dd/yyyy)</label>
-                                <input type="date" class="form-control" placeholder="Expiration Date ">
+                                <input type="date" class="form-control" placeholder="Expiration Date " formControlName="rehires_expire_date">
                             </div>
                         </div>
 
@@ -621,23 +621,27 @@
 
                         <div class="col-md-4 pt-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Signature of Employer or Authorized Representative">
+                                <input type="text" class="form-control" placeholder="Signature of Employer or Authorized Representative" formControlName="rehires_employee_signature">
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Today's Date (mm/dd/yyyy)</label>
-                                <input type="date" class="form-control" placeholder="Expiration Date ">
+                                <input type="date" class="form-control" placeholder="Today Date" formControlName="rehires_date_today">
                             </div>
                         </div>
 
                         <div class="col-md-4 pt-4">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name of Employer or Authorized Representative">
+                                <input type="text" class="form-control" placeholder="Name of Employer or Authorized Representative" formControlName="rehires_name_employer">
                             </div>
                         </div>
-                
+                    </div>
+                    <div class="row">
+                        <div class="update ml-auto mr-auto">
+                          <a class="btn btn-primary btn-round" (click)="submiti9Form()">Submit i9 Form</a>
+                        </div>
                     </div>
                 </form>
             </div>
