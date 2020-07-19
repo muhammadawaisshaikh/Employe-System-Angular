@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-handbook-pdf-making',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee-handbook-pdf-making.component.css']
 })
 export class EmployeeHandbookPdfMakingComponent implements OnInit {
+
+  routerData: any = history.state;
+  data: any;
 
   page1: any = 'https://i.ibb.co/vZkXPvw/0001.jpg';
   page2: any = 'https://i.ibb.co/0FJcFLW/0002.jpg';
@@ -36,13 +40,26 @@ export class EmployeeHandbookPdfMakingComponent implements OnInit {
   page27: any = 'https://i.ibb.co/jH6HXTL/0027.jpg';
   page28: any = 'https://i.ibb.co/TrzWXJ2/0028.jpg';
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+    this.getFormData();
   }
 
   print() {
     window.print();
+  }
+
+  getFormData() {
+    if (this.routerData.data) {
+      this.data = this.routerData.data[0];
+      console.log("data", this.data);
+    } 
+    else {
+      this.router.navigateByUrl('/employees');
+    }
   }
 
 }

@@ -1,0 +1,42 @@
+h4 {
+    position: absolute;
+}
+
+.name {
+    top: 15.5%;
+    left: 15%;
+}
+
+.sign {
+    top: 20.5%;
+    left: 15%;
+}
+
+.date {
+    top: 25.5%;
+    left: 15%;
+}
+
+.name-weekly
+{
+    top: 38%;
+    left: 30%;
+}
+
+.date-weekly
+{
+    top: 41.5%;
+    left: 27%;
+}
+
+.sign-last
+{
+    top: 13.5%;
+    left: 34%;
+}
+
+.date-last
+{
+    top: 13.5%;
+    right: 17%;
+}

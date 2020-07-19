@@ -1,5 +1,5 @@
 <div class="row justify-content-center no-print">
-    <a class="btn btn-primary btn-round text-white" (click)="print()">Print Employee Handbook</a>
+    <a class="btn btn-primary btn-round text-white" (click)="print()">Print / PDF Employee Handbook</a>
 </div>
 
 <img class="my-5" [src]="page1" alt="page 1">
@@ -27,6 +27,23 @@
 <img class="my-5" [src]="page23" alt="page 23">
 <img class="my-5" [src]="page24" alt="page 24">
 <img class="my-5" [src]="page25" alt="page 25">
-<img class="my-5" [src]="page26" alt="page 26">
-<img class="my-5" [src]="page27" alt="page 27">
+
+<div class="position-relative">
+    <h4 class="name">{{data.employee_name}}</h4>
+    <h4 class="sign">{{data.employee_signature}}</h4>
+    <h4 class="date">{{data.date}}</h4>
+    <!-- weekly pay rate sec  -->
+    <h4 class="name-weekly">{{data.employee_name}}</h4>
+    <h4 class="date-weekly">{{data.date_of_hire}}</h4>
+
+    <img class="my-5" [src]="page26" alt="page 26">
+</div>
+
+<div class="position-relative">
+    <h4 class="sign-last">{{data.employee_signature}}</h4>
+    <h4 class="date-last">{{data.date}}</h4>
+
+    <img class="my-5" [src]="page27" alt="page 27">
+</div>
+
 <img class="my-5" [src]="page28" alt="page 28">
