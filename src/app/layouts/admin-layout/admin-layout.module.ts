@@ -24,6 +24,9 @@ import { FormW4Component } from '../../pages/form-w4/form-w4.component';
 import { FormI9Component } from '../../pages/form-i9/form-i9.component';
 import { FormDirectDepositComponent } from '../../pages/form-direct-deposit/form-direct-deposit.component';
 import { EmployeeHandbookPdfMakingComponent } from '../../pages/employee-handbook-pdf-making/employee-handbook-pdf-making.component';
+import { FormW4PdfMakingComponent } from '../../pages/form-w4-pdf-making/form-w4-pdf-making.component';
+import { FormI9PdfMakingComponent } from '../../pages/form-i9-pdf-making/form-i9-pdf-making.component';
+import { FormDirectDepositPdfMakingComponent } from '../../pages/form-direct-deposit-pdf-making/form-direct-deposit-pdf-making.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -57,7 +60,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormW4Component,
     FormI9Component,
     FormDirectDepositComponent,
-    EmployeeHandbookPdfMakingComponent
+    EmployeeHandbookPdfMakingComponent,
+    FormW4PdfMakingComponent,
+    FormI9PdfMakingComponent,
+    FormDirectDepositPdfMakingComponent,
   ]
 })
 

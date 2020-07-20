@@ -18,6 +18,9 @@ import { FormW4Component } from '../../pages/form-w4/form-w4.component';
 import { FormI9Component } from '../../pages/form-i9/form-i9.component';
 import { FormDirectDepositComponent } from '../../pages/form-direct-deposit/form-direct-deposit.component';
 import { EmployeeHandbookPdfMakingComponent } from '../../pages/employee-handbook-pdf-making/employee-handbook-pdf-making.component';
+import { FormW4PdfMakingComponent } from '../../pages/form-w4-pdf-making/form-w4-pdf-making.component';
+import { FormI9PdfMakingComponent } from '../../pages/form-i9-pdf-making/form-i9-pdf-making.component';
+import { FormDirectDepositPdfMakingComponent } from '../../pages/form-direct-deposit-pdf-making/form-direct-deposit-pdf-making.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -38,4 +41,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'form-I9', component: FormI9Component },
     { path: 'form-direct-deposit', component: FormDirectDepositComponent },
     { path: 'employee-handbook-pdf-view', component: EmployeeHandbookPdfMakingComponent },
+    { path: 'form-w4-pdf-view', component: FormW4PdfMakingComponent },
+    { path: 'form-i9-pdf-view', component: FormI9PdfMakingComponent },
+    { path: 'form-direct-deposit-pdf-view', component: FormDirectDepositPdfMakingComponent },
 ];

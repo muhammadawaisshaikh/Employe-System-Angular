@@ -1,0 +1,51 @@
+h4 {
+    position: absolute;
+}
+
+.w4_firstname
+{
+    top: 68.5%;
+    left: 11%;
+}
+
+.w4_lastname {
+    top: 68.5%;
+    left: 36%;
+}
+
+.w4_social_security_number {
+    top: 68.5%;
+    right: 20%;
+}
+
+.w4_address {
+    top: 71.5%;
+    left: 10%;
+}
+
+.w4_marital_status.single{
+    top: 70.2%;
+    right: 45.7%;
+}
+
+.w4_marital_status.married
+{
+    top: 70.2%;
+    right: 38.7%;
+}
+
+.w4_marital_status.withhold
+{
+    top: 70.2%;
+    right: 30.5%;
+}
+
+.w4_city {
+    top: 74.3%;
+    left: 10%;
+}
+
+.dateToday {
+    top: 87%;
+    right: 10%;
+}
