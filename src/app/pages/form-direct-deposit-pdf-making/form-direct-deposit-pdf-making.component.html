@@ -1,1 +1,18 @@
-<p>form-direct-deposit-pdf-making works!</p>
+<div class="row justify-content-center no-print">
+    <a class="btn btn-primary btn-round text-white" (click)="print()">Print / PDF Direct Deposit Form</a>
+</div>
+
+<div class="position-relative">
+    <h4 class="direct_deposit_name">{{data.direct_deposit_name}}</h4>
+    <h4 class="direct_deposit_address">{{data.direct_deposit_address}}</h4>
+    <h4 class="direct_deposit_city">{{data.direct_deposit_city}}</h4>
+    <h4 class="name_of_bank">{{data.name_of_bank}}</h4>
+    <h4 class="account_type">{{data.bank_account_number}}</h4>
+    <h4 class="nine_digit_routing">{{data.nine_digit_routing}}</h4>
+    <h4 class="amount_type">{{data.amount_type}}</h4>
+    <h4 class="amount">{{data.amount}}</h4>
+    <h4 class="direct_deposit_employee_signature">{{data.direct_deposit_employee_signature}}</h4>
+    <h4 class="direct_deposit_date">{{data.direct_deposit_date}}</h4>
+
+    <img class="my-5" [src]="page1" alt="page 1">
+</div>

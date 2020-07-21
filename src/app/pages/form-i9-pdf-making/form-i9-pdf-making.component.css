@@ -1,0 +1,358 @@
+h4{
+    position: absolute;
+}
+
+.i9_lastname {
+    top: 24.5%;
+    left: 7%;
+}
+
+.i9_firstname{
+    top: 24.5%;
+    left: 35%;
+}
+
+.i9_middlename{
+    top: 24.5%;
+    left: 59.5%;
+}
+
+.i9_other_last_name{
+    top: 24.5%;
+    left: 70%;
+}
+
+.i9_address{
+    top: 28%;
+    left: 7%;
+}
+
+.i9_apartment_no{
+    top: 28%;
+    left: 40.5%;
+}
+
+.i9_city{
+    top: 28%;
+    left: 50.5%;
+}
+
+.i9_state{
+    top: 28%;
+    left: 74.5%;
+}
+
+.i9_zip_code{
+    top: 28%;
+    left: 81%;
+}
+
+.i9_date{
+    top: 32%;
+    left: 7%;
+}
+
+.i9_security_number{
+    top: 32%;
+    left: 25%;
+}
+
+.i9_email{
+    top: 32%;
+    left: 45%;
+}
+
+.i9_telephone_number{
+    top: 32%;
+    left: 73%;
+}
+
+.alien_reg{
+    top: 44.5%;
+    left: 60%;
+}
+
+.alien_date{
+    top: 47%;
+    left: 59%;
+}
+
+.alien_reg_or_uscis{
+    top: 53%;
+    left: 45%;
+}
+
+.alien_i94_admission_number{
+    top: 56%;
+    left: 45%;
+}
+
+.alien_foreign_passport_number{
+    top: 59%;
+    left: 45%;
+}
+
+.alien_country_issuance{
+    top: 61%;
+    left: 45%;
+}
+
+.alien_signature{
+    top: 65%;
+    left: 30%;
+}
+
+.alien_today{
+    top: 65%;
+    left: 80%;
+}
+
+.translator_signature{
+    top: 76.5%;
+    left: 30%;
+}
+
+.translator_date{
+    top: 76.5%;
+    left: 80%;
+}
+
+.translator_lastname{
+    top: 80.5%;
+    left: 10%;
+}
+
+.translator_firstname{
+    top: 80.5%;
+    left: 55%;
+}
+
+.translator_address{
+    top: 84%;
+    left: 10%;
+}
+
+.translator_city{
+    top: 84%;
+    left: 50%;
+}
+
+.translator_state{
+    top: 84%;
+    left: 75%;
+}
+
+.translator_zip{
+    top: 84%;
+    left: 81%;
+}
+
+.authorized_rep_lastname{
+    top: 19%;
+    left: 30%;
+}
+
+.authorized_rep_firstname{
+    top: 19%;
+    left: 54%;
+}
+
+.authorized_rep_m_i{
+    top: 19%;
+    left: 71%;
+}
+
+.authorized_rep_immigration_status{
+    top: 19%;
+    left: 80.5%;
+}
+
+.authorized_rep_a_doc_title{
+    top: 24%;
+    left: 20%;
+}
+
+.authorized_rep_a_issue_auth{
+    top: 26.5%;
+    left: 20%;
+}
+
+.authorized_rep_a_doc_num{
+    top: 29.5%;
+    left: 20%;
+}
+
+.authorized_rep_a_date{
+    top: 32.5%;
+    left: 18%;
+}
+
+.authorized_rep_a_doc_text{
+    top: 35%;
+    left: 20%;
+}
+
+.authorized_rep_a_issue_auth_1{
+    top: 38%;
+    left: 20%;
+}
+
+.authorized_rep_a_doc_num_1{
+    top: 40.5%;
+    left: 20%;
+}
+
+.authorized_rep_a_expiration_date{
+    top: 43.5%;
+    left: 18%;
+}
+
+.authorized_rep_b_doc_title{
+    top: 24%;
+    left: 50%;
+}
+
+.authorized_rep_b_issue_auth{
+    top: 26.5%;
+    left: 50%;
+}
+
+.authorized_rep_b_doc_num{
+    top: 29.5%;
+    left: 50%;
+}
+
+.authorized_rep_b_date{
+    top: 32.5%;
+    left: 50%;
+}
+
+.authorized_rep_b_msg{
+    top: 40%;
+    left: 55%;
+}
+
+.authorized_rep_c_doc_title{
+    top: 24%;
+    left: 80%;
+}
+
+.authorized_rep_c_issue_auth{
+    top: 27%;
+    left: 80%;
+}
+
+.authorized_rep_c_doc_num{
+    top: 29.5%;
+    left: 81%;
+}
+
+.authorized_rep_c_date{
+    top: 32.5%;
+    left: 80%;
+}
+
+.authorized_rep_employee_first_day{
+    left: 49%;
+    top: 61%;
+}
+
+.authorized_rep_signature{
+    left: 20%;
+    top: 64.5%;
+}
+
+.authorized_rep_sign_date{
+    left: 45%;
+    top: 64.5%;
+}
+
+.authorized_rep_title{
+    left: 70%;
+    top: 64.5%;
+}
+
+.authorized_rep_emp_lastname{
+    left: 15%;
+    top: 68%;
+}
+
+.authorized_rep_emp_firstname{
+    left: 45%;
+    top: 68%;
+}
+
+.authorized_rep_business{
+    top: 68%;
+    left: 75%;
+}
+
+.authorized_rep_business_address{
+    top: 71%;
+    left: 15%;
+}
+
+.authorized_rep_city{
+    left: 55%;
+    top: 71%;
+}
+
+.authorized_rep_state{
+    left: 74%;
+    top: 71%;
+}
+
+.authorized_rep_zip{
+    left: 80%;
+    top: 71%;
+}
+
+.rehires_lastname{
+    left: 10%;
+    top: 78%;
+}
+
+.rehires_firstname{
+    left: 35%;
+    top: 78%;
+}
+
+.rehires_middlename{
+    left: 57%;
+    top: 78%;
+}
+
+.rehires_date_rehire{
+    left: 75%;
+    top: 78%;
+}
+
+.rehires_doc_title{
+    left: 10%;
+    top: 84.5%;
+}
+
+.rehires_doc_num{
+    left: 50%;
+    top: 84.5%;
+}
+
+.rehires_expire_date{
+    left: 75%;
+    top: 84.5%;
+}
+
+.rehires_employee_signature{
+    left: 10%;
+    top: 90.5%;
+}
+
+.rehires_date_today{
+    left: 40%;
+    top: 90.5%;
+}
+
+.rehires_name_employer{
+    left: 60%;
+    top: 90.5%;
+}

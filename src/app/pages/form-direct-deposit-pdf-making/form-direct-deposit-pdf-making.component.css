@@ -1,0 +1,53 @@
+h4 {
+    position: absolute;
+}
+
+.direct_deposit_name{
+    top: 20%;
+    left: 40%;
+}
+
+.direct_deposit_address{
+    top: 23%;
+    left: 40%;
+}
+
+.direct_deposit_city{
+    top: 27%;
+    left: 45%;
+}
+
+.name_of_bank{
+    top: 56.5%;
+    left: 45%;
+}
+
+.account_type{
+    top: 59.5%;
+    left: 45%;
+}
+
+.nine_digit_routing{
+    top: 63%;
+    left: 45%;
+}
+
+.amount_type{
+    top: 66.5%;
+    left: 35%;
+}
+
+.amount{
+    top: 66.5%;
+    left: 55%;
+}
+
+.direct_deposit_employee_signature{
+    top: 81.5%;
+    left: 40%;
+}
+
+.direct_deposit_date{
+    top: 85%;
+    left: 40%;
+}
