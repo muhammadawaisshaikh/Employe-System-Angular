@@ -36,7 +36,12 @@ export class FormW4Component implements OnInit {
       w4_social_security_number: ['', Validators.required],
       w4_address: ['', Validators.required],
       w4_marital_status: ['', Validators.required],
-      w4_city: ['', Validators.required],
+      additional_amount: ['', Validators.required],
+      exempt: ['', Validators.required],
+      employee_sign: ['', Validators.required],
+      emlpoyee_name_address: ['', Validators.required],
+      first_date_of_employment: ['', Validators.required],
+      employer_identification_number: ['', Validators.required],
     });
   }
 
@@ -70,7 +75,13 @@ export class FormW4Component implements OnInit {
         w4_social_security_number: this.w4Form.value.w4_social_security_number,
         w4_address: this.w4Form.value.w4_address,
         w4_marital_status: this.w4Form.value.w4_marital_status,
-        w4_city: this.w4Form.value.w4_city
+        w4_city: this.w4Form.value.w4_city,
+        additional_amount: this.w4Form.value.additional_amount,
+        exempt: this.w4Form.value.exempt,
+        employee_sign: this.w4Form.value.employee_sign,
+        emlpoyee_name_address: this.w4Form.value.emlpoyee_name_address,
+        first_date_of_employment: this.w4Form.value.first_date_of_employment,
+        employer_identification_number: this.w4Form.value.employer_identification_number,
       }
 
       this.data = this.w4FormService.addW4Form(params).subscribe(res=> {
