@@ -34,9 +34,6 @@ export class FormEmployeeHandbookComponent implements OnInit {
       employee_name: ['', Validators.required],
       employee_signature: ['', Validators.required],
       date: ['', Validators.required],
-      weekly_pay_employee_name: ['', Validators.required],
-      date_of_hire: ['', Validators.required],
-      probation_period: ['', Validators.required],
     });
   }
 
@@ -67,9 +64,6 @@ export class FormEmployeeHandbookComponent implements OnInit {
         employee_name: this.employeeForm.value.employee_name,
         employee_signature: this.employeeForm.value.employee_signature,
         date: this.employeeForm.value.date,
-        weekly_pay_employee_name: this.employeeForm.value.weekly_pay_employee_name,
-        date_of_hire: this.employeeForm.value.date_of_hire,
-        probation_period: this.employeeForm.value.probation_period
       }
 
       this.data = this.employeehandbookService.addEmployeeHandbook(params).subscribe(res=> {

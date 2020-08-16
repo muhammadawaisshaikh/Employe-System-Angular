@@ -36,7 +36,7 @@ export class EmployeeHandbookPdfMakingComponent implements OnInit {
   page23: any = 'https://i.ibb.co/RzGdp51/0023.jpg';
   page24: any = 'https://i.ibb.co/PFP63Br/0024.jpg';
   page25: any = 'https://i.ibb.co/QQfNgyP/0025.jpg';
-  page26: any = 'https://i.ibb.co/9HwbLX9/0026.jpg';
+  page26: any = 'https://i.ibb.co/svqd5VY/0026.jpg';
   page27: any = 'https://i.ibb.co/jH6HXTL/0027.jpg';
   page28: any = 'https://i.ibb.co/TrzWXJ2/0028.jpg';
 

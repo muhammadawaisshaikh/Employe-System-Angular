@@ -28,7 +28,11 @@ export class AddEmployeeComponent implements OnInit {
     this.employeeForm = this.fb.group({
       employee_name: ['', Validators.required],
       date_of_hiring: ['', Validators.required],
-      email: ['', Validators.required]
+      email: ['', Validators.required],
+      training_pay: ['', Validators.required],
+      rate_of_pay: ['', Validators.required],
+      daily_pay: ['', Validators.required],
+      probation_period: ['', Validators.required],
     });
   }
 
@@ -41,6 +45,10 @@ export class AddEmployeeComponent implements OnInit {
         employee_name: empName,
         date_of_hiring: this.employeeForm.value.date_of_hiring,
         email: this.employeeForm.value.email,
+        training_pay: this.employeeForm.value.training_pay,
+        rate_of_pay: this.employeeForm.value.rate_of_pay,
+        daily_pay: this.employeeForm.value.daily_pay,
+        probation_period: this.employeeForm.value.probation_period,
       }
 
       this.userData = this.employeeService.addEmployee(params).subscribe(res=> {

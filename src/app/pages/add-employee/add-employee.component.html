@@ -30,6 +30,40 @@
                         </div>
                     </div>
 
+                    <div class="row py-4">
+                        <h3>Weekly Pay Rate</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Training Pay per week</label>
+                                <input type="text" class="form-control" placeholder="Training Pay per week" formControlName="training_pay">
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Rate of pay</label>
+                                <input type="text" class="form-control" placeholder="Rate of pay" formControlName="rate_of_pay">
+                            </div>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Daily Pay</label>
+                                <input type="text" class="form-control" placeholder="Daily Pay" formControlName="daily_pay">
+                            </div>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>90 Days Probationary Period</label>
+                                <input type="text" class="form-control" placeholder="Yes/No" formControlName="probation_period">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row">
                       <div class="update ml-auto mr-auto">
                         <a class="btn btn-primary btn-round" (click)="getShareableLink()">Get Shareable Link</a>
