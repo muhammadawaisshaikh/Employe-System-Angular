@@ -3,15 +3,21 @@
 </div>
 
 <div class="position-relative">
-    <h4 class="w4_firstname">{{data.w4_firstname}}</h4>
-    <h4 class="w4_lastname">{{data.w4_lastname}}</h4>
-    <h4 class="w4_social_security_number">{{data.w4_social_security_number}}</h4>
-    <h4 class="w4_address">{{data.w4_address}}</h4>
-    <h4 class="w4_marital_status single" *ngIf="data.w4_marital_status == 'volvo'">&#10004;</h4>
-    <h4 class="w4_marital_status married" *ngIf="data.w4_marital_status == 'married'">&#10004;</h4>
-    <h4 class="w4_marital_status withhold" *ngIf="data.w4_marital_status == 'withhold'">&#10004;</h4>
-    <h4 class="w4_city">{{data.w4_city}}</h4>
-    <h4 class="dateToday">{{dateToday.toDateString()}}</h4>
+    <h4 class="pdf-text w4_firstname">{{data.w4_firstname}}</h4>
+    <h4 class="pdf-text w4_lastname">{{data.w4_lastname}}</h4>
+    <h4 class="pdf-text w4_social_security_number">{{data.w4_social_security_number}}</h4>
+    <h4 class="pdf-text w4_address">{{data.w4_address}}</h4>
+    <h4 class="pdf-text check-mark w4_marital_status single" *ngIf="data.w4_marital_status == 'single'">&#10004;</h4>
+    <h4 class="pdf-text check-mark w4_marital_status married" *ngIf="data.w4_marital_status == 'married'">&#10004;</h4>
+    <h4 class="pdf-text check-mark w4_marital_status withhold" *ngIf="data.w4_marital_status == 'withhold'">&#10004;</h4>
+    <h4 class="pdf-text w4_city">{{data.w4_city}}</h4>
+    <h4 class="pdf-text dateToday">{{dateToday.toDateString()}}</h4>
+    <h4 class="pdf-text additional_amount">{{data.additional_amount}}</h4>
+    <h4 class="pdf-text exempt">{{data.exempt}}</h4>
+    <h4 class="pdf-text emlpoyee_name_address">{{data.emlpoyee_name_address}}</h4>
+    <h4 class="pdf-text employee_sign">{{data.employee_sign}}</h4>
+    <h4 class="pdf-text employer_identification_number">{{data.employer_identification_number}}</h4>
+    <h4 class="pdf-text first_date_of_employment">{{data.first_date_of_employment}}</h4>
 
     <img class="my-5" [src]="page1" alt="page 1">
 </div>

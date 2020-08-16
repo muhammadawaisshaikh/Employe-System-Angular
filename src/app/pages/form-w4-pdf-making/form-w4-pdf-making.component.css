@@ -4,48 +4,78 @@ h4 {
 
 .w4_firstname
 {
-    top: 68.5%;
+    top: 68%;
     left: 11%;
 }
 
 .w4_lastname {
-    top: 68.5%;
+    top: 68%;
     left: 36%;
 }
 
 .w4_social_security_number {
-    top: 68.5%;
-    right: 20%;
+    top: 68%;
+    right: 19%;
 }
 
 .w4_address {
-    top: 71.5%;
+    top: 70.90%;
     left: 10%;
 }
 
 .w4_marital_status.single{
-    top: 70.2%;
+    top: 69.70%;
     right: 45.7%;
 }
 
 .w4_marital_status.married
 {
-    top: 70.2%;
+    top: 69.70%;
     right: 38.7%;
 }
 
 .w4_marital_status.withhold
 {
-    top: 70.2%;
+    top: 69.70%;
     right: 30.5%;
 }
 
 .w4_city {
-    top: 74.3%;
+    top: 74%;
     left: 10%;
 }
 
 .dateToday {
-    top: 87%;
+    top: 86%;
     right: 10%;
+}
+
+.additional_amount{
+    top: 77%;
+    right: 10%;
+}
+
+.exempt {
+    top: 82.5%;
+    right: 20%;
+}
+
+.emlpoyee_name_address {
+    top: 90.5%;
+    left: 10%;
+}
+
+.employee_sign {
+    top: 86%;
+    left: 40%
+}
+
+.employer_identification_number {
+    top: 90.5%;
+    right: 16%;
+}
+
+.first_date_of_employment {
+    top: 90.5%;
+    right: 28%;
 }
