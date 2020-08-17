@@ -40,3 +40,23 @@ h4 {
     top: 13.5%;
     right: 17%;
 }
+
+.training_pay {
+    top: 45%;
+    left: 45%;
+}
+
+.rate_of_pay {
+    top: 48%;
+    left: 27%;
+}
+
+.daily_pay {
+    top: 53%;
+    right: 23%;
+}
+
+.probation_period {
+    top: 66%;
+    left: 39%;
+}
