@@ -189,12 +189,12 @@ h4{
 }
 
 .authorized_rep_a_doc_title{
-    top: 24%;
+    top: 24.5%;
     left: 20%;
 }
 
 .authorized_rep_a_issue_auth{
-    top: 26.5%;
+    top: 27%;
     left: 20%;
 }
 
@@ -204,7 +204,7 @@ h4{
 }
 
 .authorized_rep_a_date{
-    top: 32.5%;
+    top: 32.8%;
     left: 18%;
 }
 
@@ -229,32 +229,32 @@ h4{
 }
 
 .authorized_rep_b_doc_title{
-    top: 24%;
+    top: 24.5%;
     left: 50%;
 }
 
 .authorized_rep_b_issue_auth{
-    top: 26.5%;
+    top: 27%;
     left: 50%;
 }
 
 .authorized_rep_b_doc_num{
-    top: 29.5%;
+    top: 30%;
     left: 50%;
 }
 
 .authorized_rep_b_date{
-    top: 32.5%;
+    top: 32.8%;
     left: 50%;
 }
 
 .authorized_rep_b_msg{
     top: 40%;
-    left: 55%;
+    left: 38%;
 }
 
 .authorized_rep_c_doc_title{
-    top: 24%;
+    top: 24.5%;
     left: 80%;
 }
 
@@ -264,12 +264,12 @@ h4{
 }
 
 .authorized_rep_c_doc_num{
-    top: 29.5%;
+    top: 30%;
     left: 81%;
 }
 
 .authorized_rep_c_date{
-    top: 32.5%;
+    top: 32.8%;
     left: 80%;
 }
 
@@ -280,100 +280,100 @@ h4{
 
 .authorized_rep_signature{
     left: 20%;
-    top: 64.5%;
+    top: 64.3%;
 }
 
 .authorized_rep_sign_date{
     left: 45%;
-    top: 64.5%;
+    top: 64.3%;
 }
 
 .authorized_rep_title{
     left: 70%;
-    top: 64.5%;
+    top: 64.3%;
 }
 
 .authorized_rep_emp_lastname{
     left: 15%;
-    top: 68%;
+    top: 67.5%;
 }
 
 .authorized_rep_emp_firstname{
     left: 45%;
-    top: 68%;
+    top: 67.5%;
 }
 
 .authorized_rep_business{
-    top: 68%;
+    top: 67.5%;
     left: 75%;
 }
 
 .authorized_rep_business_address{
-    top: 71%;
+    top: 70.5%;
     left: 15%;
 }
 
 .authorized_rep_city{
     left: 55%;
-    top: 71%;
+    top: 70.5%;
 }
 
 .authorized_rep_state{
     left: 74%;
-    top: 71%;
+    top: 70.5%;
 }
 
 .authorized_rep_zip{
     left: 80%;
-    top: 71%;
+    top: 70.5%;
 }
 
 .rehires_lastname{
     left: 10%;
-    top: 78%;
+    top: 77.5%;
 }
 
 .rehires_firstname{
     left: 35%;
-    top: 78%;
+    top: 77.5%;
 }
 
 .rehires_middlename{
     left: 57%;
-    top: 78%;
+    top: 77.5%;
 }
 
 .rehires_date_rehire{
     left: 75%;
-    top: 78%;
+    top: 77.5%;
 }
 
 .rehires_doc_title{
     left: 10%;
-    top: 84.5%;
+    top: 83.5%;
 }
 
 .rehires_doc_num{
     left: 50%;
-    top: 84.5%;
+    top: 83.5%;
 }
 
 .rehires_expire_date{
     left: 75%;
-    top: 84.5%;
+    top: 83.5%;
 }
 
 .rehires_employee_signature{
     left: 10%;
-    top: 90.5%;
+    top: 89.5%;
 }
 
 .rehires_date_today{
     left: 40%;
-    top: 90.5%;
+    top: 89.5%;
 }
 
 .rehires_name_employer{
     left: 60%;
-    top: 90.5%;
+    top: 89.5%;
 }
