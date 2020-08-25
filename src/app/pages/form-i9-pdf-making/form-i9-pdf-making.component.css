@@ -3,67 +3,88 @@ h4{
 }
 
 .i9_lastname {
-    top: 24.5%;
+    top: 25.5%;
     left: 7%;
 }
 
 .i9_firstname{
-    top: 24.5%;
+    top: 25.5%;
     left: 35%;
 }
 
 .i9_middlename{
-    top: 24.5%;
+    top: 25.5%;
     left: 59.5%;
 }
 
 .i9_other_last_name{
-    top: 24.5%;
+    top: 25.5%;
     left: 70%;
 }
 
 .i9_address{
-    top: 28%;
+    top: 29%;
     left: 7%;
 }
 
 .i9_apartment_no{
-    top: 28%;
+    top: 29%;
     left: 40.5%;
 }
 
 .i9_city{
-    top: 28%;
+    top: 29%;
     left: 50.5%;
 }
 
 .i9_state{
-    top: 28%;
+    top: 29%;
     left: 74.5%;
 }
 
 .i9_zip_code{
-    top: 28%;
+    top: 29%;
     left: 81%;
 }
 
 .i9_date{
-    top: 32%;
+    top: 33%;
     left: 7%;
 }
 
 .i9_security_number{
-    top: 32%;
+    top: 33%;
     left: 25%;
 }
 
+.i9_security_number0
+{
+    top: 33%;
+    left: 25.3%;
+    letter-spacing: 10px;
+}
+
+.i9_security_number1
+{
+    top: 33%;
+    left: 32.2%;
+    letter-spacing: 10px;
+}
+
+.i9_security_number2
+{
+    top: 33%;
+    left: 37.3%;
+    letter-spacing: 7px;
+}
+
 .i9_email{
-    top: 32%;
+    top: 33%;
     left: 45%;
 }
 
 .i9_telephone_number{
-    top: 32%;
+    top: 33%;
     left: 73%;
 }
 
@@ -108,62 +129,62 @@ h4{
 }
 
 .translator_signature{
-    top: 76.5%;
+    top: 76%;
     left: 30%;
 }
 
 .translator_date{
-    top: 76.5%;
+    top: 76%;
     left: 80%;
 }
 
 .translator_lastname{
-    top: 80.5%;
+    top: 79.5%;
     left: 10%;
 }
 
 .translator_firstname{
-    top: 80.5%;
+    top: 79.5%;
     left: 55%;
 }
 
 .translator_address{
-    top: 84%;
+    top: 83%;
     left: 10%;
 }
 
 .translator_city{
-    top: 84%;
+    top: 83%;
     left: 50%;
 }
 
 .translator_state{
-    top: 84%;
+    top: 83%;
     left: 75%;
 }
 
 .translator_zip{
-    top: 84%;
+    top: 83%;
     left: 81%;
 }
 
 .authorized_rep_lastname{
-    top: 19%;
+    top: 19.5%;
     left: 30%;
 }
 
 .authorized_rep_firstname{
-    top: 19%;
+    top: 19.5%;
     left: 54%;
 }
 
 .authorized_rep_m_i{
-    top: 19%;
+    top: 19.5%;
     left: 71%;
 }
 
 .authorized_rep_immigration_status{
-    top: 19%;
+    top: 19.5%;
     left: 80.5%;
 }
 
