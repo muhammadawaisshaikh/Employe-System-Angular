@@ -13,6 +13,7 @@ export class AddEmployeeComponent implements OnInit {
 
   employeeForm: FormGroup;
   userData: any;
+  empName: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -39,10 +40,10 @@ export class AddEmployeeComponent implements OnInit {
   getShareableLink() {
     if (this.employeeForm.valid) {
 
-      let empName = this.employeeForm.value.employee_name.split(' ').join('');
+      this.empName = this.employeeForm.value.employee_name.split(' ').join('');
 
       let params = {
-        employee_name: empName,
+        employee_name: this.empName,
         date_of_hiring: this.employeeForm.value.date_of_hiring,
         email: this.employeeForm.value.email,
         training_pay: this.employeeForm.value.training_pay,
