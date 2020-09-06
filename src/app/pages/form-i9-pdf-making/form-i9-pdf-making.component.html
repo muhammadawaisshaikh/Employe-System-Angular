@@ -19,6 +19,11 @@
     <h4 class="pdf-text i9_email">{{data.i9_email}}</h4>
     <h4 class="pdf-text i9_telephone_number">{{data.i9_telephone_number}} </h4>
 
+    <h4 class="pdf-text check-mark i9_i_attest_i_am noncitizen" *ngIf="data.i9_i_attest_i_am == 'A noncitizen national of the United States'">&#10004;</h4>
+    <h4 class="pdf-text check-mark i9_i_attest_i_am citizen" *ngIf="data.i9_i_attest_i_am == 'A citizen of the United States'">&#10004;</h4>
+    <h4 class="pdf-text check-mark i9_i_attest_i_am lawful" *ngIf="data.i9_i_attest_i_am == 'A lawful permanent resident'">&#10004;</h4>
+    <h4 class="pdf-text check-mark i9_i_attest_i_am alien" *ngIf="data.i9_i_attest_i_am == 'An alien authorized to work'">&#10004;</h4>
+
     <h4 class="pdf-text alien_reg">{{data.alien_reg_or_uscis}}</h4>
     <h4 class="pdf-text alien_date">{{data.alien_date}}</h4>
     <h4 class="pdf-text alien_reg_or_uscis">{{data.alien_reg_or_uscis}}</h4>
@@ -27,6 +32,9 @@
     <h4 class="pdf-text alien_country_issuance">{{data.alien_country_issuance}}</h4>
     <h4 class="pdf-text alien_signature">{{data.alien_signature}}</h4>
     <h4 class="pdf-text alien_today">{{dateToday.toDateString()}}</h4>
+
+    <h4 class="pdf-text check-mark translator_true" *ngIf="data.translator_check != 'I did not use a preparer or translator'">&#10004;</h4>
+    <h4 class="pdf-text check-mark translator_false" *ngIf="data.translator_check == 'I did not use a preparer or translator'">&#10004;</h4>
 
     <h4 class="pdf-text translator_signature">{{data.translator_signature}}</h4>
     <h4 class="pdf-text translator_date">{{dateToday.toDateString()}}</h4>
