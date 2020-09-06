@@ -3,16 +3,26 @@
 </div>
 
 <div class="position-relative">
-    <h4 class="direct_deposit_name">{{data.direct_deposit_name}}</h4>
-    <h4 class="direct_deposit_address">{{data.direct_deposit_address}}</h4>
-    <h4 class="direct_deposit_city">{{data.direct_deposit_city}}</h4>
-    <h4 class="name_of_bank">{{data.name_of_bank}}</h4>
-    <h4 class="account_type">{{data.bank_account_number}}</h4>
-    <h4 class="nine_digit_routing">{{data.nine_digit_routing}}</h4>
-    <h4 class="amount_type">{{data.amount_type}}</h4>
-    <h4 class="amount">{{data.amount}}</h4>
-    <h4 class="direct_deposit_employee_signature">{{data.direct_deposit_employee_signature}}</h4>
-    <h4 class="direct_deposit_date">{{data.direct_deposit_date}}</h4>
+    <h4 class="pdf-text direct_deposit_name">{{data.direct_deposit_name}}</h4>
+    <h4 class="pdf-text direct_deposit_address">{{data.direct_deposit_address}}</h4>
+    <h4 class="pdf-text direct_deposit_city">{{data.direct_deposit_city}}</h4>
+    <h4 class="pdf-text name_of_bank">{{data.name_of_bank}}</h4>
+    <h4 class="pdf-text account_type">{{data.bank_account_number}}</h4>
+    <h4 class="pdf-text nine_digit_routing">{{data.nine_digit_routing}}</h4>
+
+    <h4 class="pdf-text amount_type check-mark" 
+        [ngClass]="{'dollar': data.amount_type == '$', 'percent': data.amount_type == '%' }">
+        &#10004;
+    </h4>
+    <h4 class="pdf-text amount" [ngClass]="{'dollar': data.amount_type == '$', 'percent': data.amount_type == '%' }">{{data.amount}}</h4>
+
+    <h4 class="pdf-text check-mark"
+        [ngClass]="{'current': account_type_bank == 'Current', 'savings': account_type_bank == 'Savings' }">
+        &#10004;
+    </h4>
+
+    <h4 class="pdf-text direct_deposit_employee_signature">{{data.direct_deposit_employee_signature}}</h4>
+    <h4 class="pdf-text direct_deposit_date">{{data.direct_deposit_date}}</h4>
 
     <img class="my-5" [src]="page1" alt="page 1">
 </div>

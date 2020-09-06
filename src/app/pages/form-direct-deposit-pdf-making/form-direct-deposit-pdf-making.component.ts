@@ -29,7 +29,7 @@ export class FormDirectDepositPdfMakingComponent implements OnInit {
   getFormData() {
     if (this.routerData.data) {
       this.data = this.routerData.data[0];
-      console.log("data", this.data);
+      console.log("data", this.data.account_type_bank);
     } 
     else {
       this.router.navigateByUrl('/employees');

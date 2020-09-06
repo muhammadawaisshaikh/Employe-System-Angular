@@ -3,12 +3,12 @@ h4 {
 }
 
 .direct_deposit_name{
-    top: 20%;
+    top: 21%;
     left: 40%;
 }
 
 .direct_deposit_address{
-    top: 23%;
+    top: 24%;
     left: 40%;
 }
 
@@ -32,22 +32,32 @@ h4 {
     left: 45%;
 }
 
-.amount_type{
-    top: 66.5%;
+.amount_type.dollar{
+    top: 65.5%;
+    left: 30%;
+}
+
+.amount.dollar{
+    top: 66%;
     left: 35%;
 }
 
-.amount{
-    top: 66.5%;
-    left: 55%;
-}
-
 .direct_deposit_employee_signature{
-    top: 81.5%;
+    top: 80.5%;
     left: 40%;
 }
 
 .direct_deposit_date{
-    top: 85%;
+    top: 84%;
     left: 40%;
+}
+
+.current {
+    top: 69%;
+    left: 30%;
+}
+
+.savings {
+    top: 69%;
+    left: 49%;
 }
