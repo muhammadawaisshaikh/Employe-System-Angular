@@ -17,7 +17,7 @@
     <h4 class="pdf-text amount" [ngClass]="{'dollar': data.amount_type == '$', 'percent': data.amount_type == '%' }">{{data.amount}}</h4>
 
     <h4 class="pdf-text check-mark"
-        [ngClass]="{'current': account_type_bank == 'Current', 'savings': account_type_bank == 'Savings' }">
+        [ngClass]="{'current': data.account_type_bank == 'Current', 'savings': data.account_type_bank == 'Savings' }">
         &#10004;
     </h4>
 
